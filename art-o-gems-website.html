@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Art 'O' Gems — Gallery &amp; Auction House, Pune</title>
+<meta name="description" content="A gallery and auction house for modern art, coloured stones and period jewels. Auctions, exhibitions, valuations and private sales.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* --- PEARL / IVORY / EMERALD --- */
+  --ivory:#F7F2E6;
+  --ivory-2:#F1EADA;
+  --pearl:#E5E8E7;
+  --pearl-2:#F0F2F2;
+  --pearl-dp:#CDD4D2;
+  --emerald:#0B6046;
+  --emerald-deep:#052E22;
+  --emerald-ink:#04211A;
+  --emerald-br:#12946C;
+  --ink:#152019;
+  --dim:#69786F;
+  --dim-lt:#9FB0A6;
+  --line:rgba(21,32,25,.14);
+  --line-2:rgba(21,32,25,.08);
+  --line-dk:rgba(247,242,230,.16);
+  --nacre:linear-gradient(102deg,#E9F1EC 0%,#F3E9F1 26%,#E4EDF5 52%,#EFF4E7 74%,#F6EDE6 100%);
+  --display:"Gloock",Georgia,serif;
+  --body:"Archivo",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--ivory);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+button,input,textarea,select{font:inherit;color:inherit}
+button{background:none;border:0;cursor:pointer}
+:focus-visible{outline:2px solid var(--emerald-br);outline-offset:3px}
+.wrap{width:min(1300px,91vw);margin-inline:auto}
+.narrow{width:min(880px,91vw);margin-inline:auto}
+.band{padding:clamp(64px,8vw,120px) 0}
+.band-s{padding:clamp(46px,5vw,74px) 0}
+hr.rule{border:0;height:1px;background:var(--line);margin:0}
+
+/* type */
+h1,h2,h3,h4{font-family:var(--display);font-weight:400;letter-spacing:-.012em;margin:0}
+h1{font-size:clamp(2.6rem,6.4vw,5rem);line-height:1}
+h2{font-size:clamp(1.9rem,4vw,3.1rem);line-height:1.04}
+h3{font-size:clamp(1.2rem,1.9vw,1.6rem);line-height:1.18}
+h4{font-size:1.06rem;line-height:1.25}
+p{margin:0}
+.eyebrow{font-family:var(--mono);font-size:.67rem;letter-spacing:.2em;text-transform:uppercase;color:var(--emerald);display:flex;align-items:center;gap:.75em;flex-wrap:wrap}
+.eyebrow::before{content:"";width:24px;height:1px;background:var(--emerald);flex:none}
+.lead{font-size:clamp(1rem,1.3vw,1.15rem);color:#43524A;max-width:56ch}
+.mono{font-family:var(--mono);font-size:.78rem;letter-spacing:.02em}
+.muted{color:var(--dim)}
+.em{color:var(--emerald)}
+.stack>*+*{margin-top:18px}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6em;font-family:var(--mono);font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;padding:13px 22px;border:1px solid var(--line);border-radius:2px;text-decoration:none;transition:background .25s,color .25s,border-color .25s}
+.btn:hover{background:var(--ink);color:var(--ivory);border-color:var(--ink)}
+.btn-em{background:var(--emerald);border-color:var(--emerald);color:#fff}
+.btn-em:hover{background:var(--emerald-deep);border-color:var(--emerald-deep);color:#fff}
+.btn-gh{border-color:var(--line-dk);color:var(--ivory)}
+.btn-gh:hover{background:var(--ivory);color:var(--emerald-ink);border-color:var(--ivory)}
+.btn-sm{padding:9px 15px;font-size:.65rem}
+
+/* nacre motif */
+.nacre{background:var(--nacre)}
+.nacre-rule{height:2px;background:var(--nacre);border-radius:2px}
+
+/* ---------- header ---------- */
+.hdr{position:sticky;top:0;z-index:80;background:rgba(247,242,230,.9);backdrop-filter:blur(14px);border-bottom:1px solid var(--line-2)}
+.hdr-in{display:flex;align-items:center;justify-content:space-between;gap:22px;height:70px}
+.mark{display:flex;align-items:center;gap:.1em;font-family:var(--display);font-size:1.3rem;text-decoration:none;color:var(--emerald-ink);flex:none}
+.mark .q{color:var(--emerald);font-size:.9em}
+.mark svg{width:1.05em;height:1.05em;margin-inline:.06em}
+.mainnav{display:flex;gap:24px;align-items:center;flex-wrap:wrap}
+.mainnav a{font-family:var(--mono);font-size:.665rem;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;color:#42524A;position:relative;padding:5px 0;white-space:nowrap}
+.mainnav a::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:1px;background:var(--emerald);transition:right .3s}
+.mainnav a:hover::after,.mainnav a.act::after{right:0}
+.mainnav a.act{color:var(--emerald)}
+.burger{display:none;width:42px;height:42px;border:1px solid var(--line);border-radius:2px;align-items:center;justify-content:center}
+.burger span{display:block;width:16px;height:1px;background:var(--ink);position:relative}
+.burger span::before,.burger span::after{content:"";position:absolute;left:0;width:16px;height:1px;background:var(--ink)}
+.burger span::before{top:-5px}.burger span::after{top:5px}
+.drawer{display:none;border-top:1px solid var(--line-2);background:var(--ivory-2);padding:14px 0 22px}
+.drawer.open{display:block}
+.drawer a{display:block;padding:12px 0;border-bottom:1px solid var(--line-2);font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;text-decoration:none}
+@media(max-width:1180px){.mainnav{display:none}.burger{display:flex}.hdr-cta{display:none}}
+
+/* ---------- breadcrumb ---------- */
+.crumbs{border-bottom:1px solid var(--line-2);background:var(--pearl-2)}
+.crumbs-in{display:flex;gap:10px;align-items:center;padding:11px 0;font-family:var(--mono);font-size:.65rem;letter-spacing:.13em;text-transform:uppercase;color:var(--dim)}
+.crumbs-in a{text-decoration:none;color:var(--emerald)}
+
+/* ---------- page head ---------- */
+.phead{padding:clamp(48px,6vw,88px) 0 clamp(34px,4vw,54px);border-bottom:1px solid var(--line-2)}
+.phead h1{margin:20px 0 0;max-width:18ch}
+.phead .lead{margin-top:22px}
+.phead-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:clamp(24px,4vw,60px);align-items:end}
+@media(max-width:900px){.phead-grid{grid-template-columns:1fr}}
+
+/* ---------- hero (home) ---------- */
+.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line-2)}
+.hero::before{content:"";position:absolute;inset:0;background:var(--nacre);opacity:.55}
+.hero-in{position:relative;display:grid;grid-template-columns:1fr .8fr;gap:clamp(30px,5vw,74px);align-items:center;padding:clamp(52px,7vw,104px) 0}
+.hero h1{margin:20px 0 24px}
+.hero h1 em{font-style:normal;color:var(--emerald)}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+.hero-note{margin-top:30px;padding-top:18px;border-top:1px solid var(--line);color:var(--dim);max-width:46ch}
+@media(max-width:980px){.hero-in{grid-template-columns:1fr}.plate-wrap{order:-1}}
+
+/* ---------- plate + loupe ---------- */
+.plate-wrap{margin:0}
+.plate{position:relative;aspect-ratio:4/5;background:var(--pearl-dp);overflow:hidden;border:1px solid var(--line);cursor:none;touch-action:none;box-shadow:0 30px 70px -40px rgba(5,46,34,.55)}
+.plate svg{width:100%;height:100%}
+.plate.sq{aspect-ratio:1/1}
+.loupe{position:absolute;width:180px;height:180px;border-radius:50%;overflow:hidden;pointer-events:none;box-shadow:0 0 0 1px rgba(255,255,255,.8),0 0 0 8px rgba(5,46,34,.42),0 20px 50px rgba(5,46,34,.4)}
+.loupe-inner{position:absolute;top:0;left:0}
+.loupe-inner svg{width:100%;height:100%}
+.loupe::after{content:"";position:absolute;inset:0;border-radius:50%;background:radial-gradient(circle at 32% 26%,rgba(255,255,255,.28),transparent 48%)}
+.cross{position:absolute;inset:0}
+.cross i{position:absolute;background:rgba(255,255,255,.7)}
+.cross i:nth-child(1){left:50%;top:44%;width:1px;height:11px}
+.cross i:nth-child(2){left:50%;bottom:44%;width:1px;height:11px}
+.cross i:nth-child(3){top:50%;left:44%;height:1px;width:11px}
+.cross i:nth-child(4){top:50%;right:44%;height:1px;width:11px}
+.plate-tag{position:absolute;left:0;bottom:0;z-index:3;display:flex;gap:1px}
+.plate-tag span{background:rgba(4,33,26,.88);color:var(--ivory);padding:8px 12px;font-family:var(--mono);font-size:.64rem;letter-spacing:.13em;text-transform:uppercase}
+.plate-tag .hint{color:#8FE3C6}
+.caption{margin-top:13px;color:var(--dim);font-family:var(--mono);font-size:.7rem;line-height:1.7}
+.caption b{color:var(--ink);font-weight:400}
+@media(max-width:980px){.loupe{width:128px;height:128px}}
+
+/* ---------- data strip ---------- */
+.strip{background:var(--emerald-ink);color:var(--ivory)}
+.strip-in{display:grid;grid-template-columns:repeat(4,1fr)}
+.cell{padding:26px 28px;border-left:1px solid var(--line-dk)}
+.cell:first-child{border-left:0;padding-left:0}
+.cell dt{font-family:var(--mono);font-size:.63rem;letter-spacing:.19em;text-transform:uppercase;color:#8FA79A;margin-bottom:8px}
+.cell dd{margin:0;font-size:.93rem}
+.cell dd span{color:#8FA79A}
+.pulse{display:inline-block;width:7px;height:7px;border-radius:50%;background:#3FD9A6;margin-right:8px;animation:pulse 2.4s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.22}}
+@media(max-width:900px){.strip-in{grid-template-columns:1fr 1fr}.cell{padding:20px}.cell:first-child{padding-left:20px}.cell:nth-child(3){border-left:0;padding-left:20px}.cell:nth-child(n+3){border-top:1px solid var(--line-dk)}}
+@media(max-width:560px){.strip-in{grid-template-columns:1fr}.cell{border-left:0;padding:18px 0}.cell+.cell{border-top:1px solid var(--line-dk)}}
+
+/* ---------- section heads ---------- */
+.shead{display:flex;justify-content:space-between;align-items:flex-end;gap:26px;flex-wrap:wrap;margin-bottom:clamp(30px,3.6vw,48px)}
+.shead h2{max-width:18ch}
+
+/* ---------- lot cards ---------- */
+.grid{display:grid;gap:clamp(20px,2.4vw,34px)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+.g2{grid-template-columns:repeat(2,1fr)}
+@media(max-width:1080px){.g4{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:900px){.g3,.g4{grid-template-columns:repeat(2,1fr)}.g2{grid-template-columns:1fr}}
+@media(max-width:560px){.g3,.g4{grid-template-columns:1fr}}
+.card{display:block;text-align:left;width:100%;text-decoration:none;background:none}
+.card-art{position:relative;aspect-ratio:1/1;overflow:hidden;background:var(--pearl-dp);border:1px solid var(--line-2)}
+.card-art svg{width:100%;height:100%;transition:transform .7s cubic-bezier(.2,.7,.3,1)}
+.card:hover .card-art svg{transform:scale(1.045)}
+.card-no{position:absolute;left:0;top:0;background:rgba(4,33,26,.86);color:var(--ivory);font-family:var(--mono);font-size:.62rem;letter-spacing:.13em;padding:6px 10px}
+.card-flag{position:absolute;right:0;top:0;background:var(--emerald-br);color:#fff;font-family:var(--mono);font-size:.6rem;letter-spacing:.13em;text-transform:uppercase;padding:6px 10px}
+.card-b{padding:14px 2px 0}
+.card-b h4{font-size:1.02rem;margin-bottom:4px}
+.card-b .who{font-family:var(--mono);font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:var(--emerald);margin-bottom:8px}
+.card-b .est{font-family:var(--mono);font-size:.74rem;color:var(--dim);margin-top:8px;padding-top:8px;border-top:1px solid var(--line-2)}
+.card:hover .card-b h4{text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+
+/* ---------- filters ---------- */
+.filters{display:flex;gap:8px;flex-wrap:wrap;align-items:center;padding:18px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:clamp(26px,3vw,42px)}
+.chip{font-family:var(--mono);font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;padding:8px 14px;border:1px solid var(--line);border-radius:2px;transition:.2s}
+.chip:hover{border-color:var(--emerald)}
+.chip.on{background:var(--emerald);border-color:var(--emerald);color:#fff}
+.filters .count{margin-left:auto;font-family:var(--mono);font-size:.68rem;color:var(--dim)}
+
+/* ---------- lot detail ---------- */
+.lotpage{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(28px,4vw,64px);align-items:start}
+@media(max-width:980px){.lotpage{grid-template-columns:1fr}}
+.lotside{position:sticky;top:96px}
+.lotmeta{font-family:var(--mono);font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--emerald);margin-bottom:14px}
+.pricebox{border:1px solid var(--line);background:var(--pearl-2);padding:22px;margin-top:24px}
+.pricebox .k{font-family:var(--mono);font-size:.63rem;letter-spacing:.18em;text-transform:uppercase;color:var(--dim)}
+.pricebox .v{font-family:var(--display);font-size:1.55rem;margin:6px 0 2px}
+.pricebox .btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.spec{margin:26px 0 0;border-top:1px solid var(--line)}
+.spec div{display:flex;justify-content:space-between;gap:18px;padding:11px 0;border-bottom:1px solid var(--line-2);font-size:.87rem}
+.spec dt{font-family:var(--mono);font-size:.63rem;letter-spacing:.15em;text-transform:uppercase;color:var(--dim);flex:none;padding-top:3px}
+.spec dd{margin:0;text-align:right;max-width:60%}
+.blocks{margin-top:34px}
+.block{border-top:1px solid var(--line);padding:20px 0}
+.block h4{margin-bottom:8px}
+.block p{font-size:.92rem;color:#43524A}
+
+/* ---------- tables ---------- */
+.tbl{width:100%;border-collapse:collapse;font-size:.88rem}
+.tbl th{text-align:left;font-family:var(--mono);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--dim);font-weight:400;padding:12px 14px;border-bottom:1px solid var(--line)}
+.tbl td{padding:14px;border-bottom:1px solid var(--line-2);vertical-align:top}
+.tbl tr:hover td{background:var(--pearl-2)}
+.tbl .num{font-family:var(--mono);font-size:.8rem;white-space:nowrap}
+.tbl .sold{color:var(--emerald);font-family:var(--mono);font-size:.8rem;white-space:nowrap}
+.tbl-wrap{overflow-x:auto}
+
+/* ---------- rows / list items ---------- */
+.rows{border-top:1px solid var(--line)}
+.row{display:grid;grid-template-columns:150px 1fr auto;gap:24px;padding:24px 0;border-bottom:1px solid var(--line-2);align-items:start}
+.row .when{font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;color:var(--emerald);text-transform:uppercase}
+.row h3{margin-bottom:6px}
+.row p{color:var(--dim);font-size:.9rem;max-width:62ch}
+@media(max-width:760px){.row{grid-template-columns:1fr;gap:10px}}
+
+/* ---------- steps ---------- */
+.steps{counter-reset:s}
+.step{display:grid;grid-template-columns:52px 1fr;gap:18px;padding:22px 0;border-top:1px solid var(--line)}
+.step::before{counter-increment:s;content:counter(s,decimal-leading-zero);font-family:var(--mono);font-size:.7rem;color:var(--emerald);letter-spacing:.1em;padding-top:4px}
+.step h4{margin-bottom:5px}
+.step p{color:var(--dim);font-size:.9rem}
+
+/* ---------- people ---------- */
+.person{border-top:1px solid var(--line);padding-top:20px}
+.person .av{width:100%;aspect-ratio:4/5;background:var(--pearl);margin-bottom:16px;overflow:hidden}
+.person .av svg{width:100%;height:100%}
+.person h4{margin-bottom:3px}
+.person .role{font-family:var(--mono);font-size:.63rem;letter-spacing:.14em;text-transform:uppercase;color:var(--emerald);margin-bottom:10px}
+.person p{font-size:.86rem;color:var(--dim)}
+
+/* ---------- panels ---------- */
+.panel{background:var(--pearl-2);border:1px solid var(--line-2);padding:clamp(22px,3vw,36px)}
+.panel-em{background:var(--emerald-ink);color:var(--ivory);border-color:transparent}
+.panel-em .eyebrow{color:#7FD9BA}.panel-em .eyebrow::before{background:#7FD9BA}
+.panel-em p{color:#C4D3CB}
+.panel-nacre{background:var(--nacre);border-color:var(--line-2)}
+.dark{background:var(--emerald-ink);color:var(--ivory)}
+.dark .eyebrow{color:#7FD9BA}.dark .eyebrow::before{background:#7FD9BA}
+.dark .lead,.dark p{color:#C4D3CB}
+.dark h1,.dark h2,.dark h3,.dark h4{color:var(--ivory)}
+.dark .btn{border-color:var(--line-dk);color:var(--ivory)}
+.dark .btn:hover{background:var(--ivory);color:var(--emerald-ink);border-color:var(--ivory)}
+.dark .tbl th{color:#8FA79A;border-color:var(--line-dk)}
+.dark .tbl td{border-color:rgba(247,242,230,.09)}
+.dark .tbl tr:hover td{background:rgba(247,242,230,.05)}
+
+/* ---------- checklist ---------- */
+.checklist{list-style:none;margin:22px 0 0;padding:0}
+.checklist li{padding:13px 0 13px 28px;border-top:1px solid var(--line-2);position:relative;font-size:.92rem}
+.checklist li::before{content:"";position:absolute;left:0;top:19px;width:9px;height:9px;background:var(--emerald);clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%)}
+
+/* ---------- form ---------- */
+.form{display:grid;gap:16px;grid-template-columns:1fr 1fr}
+.field{display:flex;flex-direction:column;gap:7px}
+.field.full{grid-column:1/-1}
+.field label{font-family:var(--mono);font-size:.63rem;letter-spacing:.15em;text-transform:uppercase;color:var(--dim)}
+.field input,.field textarea,.field select{padding:12px 13px;border:1px solid var(--line);border-radius:2px;background:#fff;font-size:.92rem}
+.field textarea{min-height:120px;resize:vertical}
+.field input:focus,.field textarea:focus,.field select:focus{outline:none;border-color:var(--emerald)}
+.formnote{grid-column:1/-1;font-size:.8rem;color:var(--dim)}
+.sent{grid-column:1/-1;padding:14px 16px;background:var(--emerald);color:#fff;font-family:var(--mono);font-size:.72rem;letter-spacing:.06em}
+@media(max-width:700px){.form{grid-template-columns:1fr}}
+
+/* ---------- stat ---------- */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line-2);border:1px solid var(--line-2)}
+.stat{background:var(--ivory);padding:24px}
+.dark .stat{background:var(--emerald-ink)}
+.stat .n{font-family:var(--display);font-size:clamp(1.7rem,3vw,2.5rem);line-height:1;color:var(--emerald)}
+.dark .stat .n{color:#3FD9A6}
+.stat .l{font-family:var(--mono);font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:var(--dim);margin-top:10px}
+@media(max-width:820px){.stats{grid-template-columns:1fr 1fr}}
+
+/* ---------- footer ---------- */
+.ftr{background:var(--emerald-ink);color:var(--ivory);padding:clamp(50px,6vw,84px) 0 0}
+.ftr-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:clamp(24px,3vw,50px);padding-bottom:46px}
+.ftr h5{font-family:var(--mono);font-size:.63rem;letter-spacing:.18em;text-transform:uppercase;color:#8FA79A;margin:0 0 16px;font-weight:400}
+.ftr a{display:block;text-decoration:none;color:#D5E0DA;font-size:.88rem;padding:5px 0}
+.ftr a:hover{color:#3FD9A6}
+.ftr p{color:#A9BCB2;font-size:.88rem}
+.ftr-b{border-top:1px solid var(--line-dk);padding:22px 0;display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;font-family:var(--mono);font-size:.64rem;letter-spacing:.1em;color:#8FA79A}
+.news{display:flex;gap:8px;margin-top:14px}
+.news input{flex:1;min-width:0;padding:11px 12px;background:transparent;border:1px solid var(--line-dk);border-radius:2px;color:var(--ivory);font-size:.85rem}
+.news input::placeholder{color:#6F8579}
+@media(max-width:900px){.ftr-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.ftr-grid{grid-template-columns:1fr}}
+
+/* ---------- motion ---------- */
+.rise{opacity:0;transform:translateY(20px);transition:opacity .75s cubic-bezier(.2,.7,.3,1),transform .75s cubic-bezier(.2,.7,.3,1)}
+.rise.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}.rise{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<header class="hdr">
+  <div class="wrap hdr-in">
+    <a class="mark" href="#/">
+      Art <span class="q">&lsquo;</span><svg viewBox="0 0 40 40" aria-hidden="true"><g fill="none" stroke="#0B6046" stroke-width="1.5"><path d="M20 2.4 34.3 8.4 40 20 34.3 31.6 20 37.6 5.7 31.6 0 20 5.7 8.4Z"/><path d="M20 11.4 27.5 14.5 30.6 20 27.5 25.5 20 28.6 12.5 25.5 9.4 20 12.5 14.5Z"/><path d="M12.5 14.5 5.7 8.9M27.5 14.5 34.3 8.9M12.5 25.5 5.7 31.1M27.5 25.5 34.3 31.1M20 11.4V2.9M20 28.6v8.5M9.4 20H.6M30.6 20h8.8"/></g></svg><span class="q">&rsquo;</span> Gems
+    </a>
+    <nav class="mainnav" id="mainnav" aria-label="Primary"></nav>
+    <a class="btn btn-em hdr-cta" href="#/bidding">Register to bid</a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span></button>
+  </div>
+  <div class="drawer" id="drawer"><div class="wrap" id="drawernav"></div></div>
+</header>
+
+<main id="app"></main>
+
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr-grid">
+      <div>
+        <h5>Art &lsquo;O&rsquo; Gems</h5>
+        <p>A gallery and auction house for modern art, coloured stones and period jewels. Founded in Pune, 2009.</p>
+        <div class="nacre-rule" style="margin:20px 0;max-width:120px"></div>
+        <h5>Saleroom bulletin</h5>
+        <p style="font-size:.82rem">Catalogues and viewing dates, roughly once a month.</p>
+        <div class="news">
+          <input id="nlEmail" type="email" placeholder="you@example.com" aria-label="Email address">
+          <button class="btn btn-gh btn-sm" id="nlBtn">Join</button>
+        </div>
+        <p id="nlMsg" class="mono" style="margin-top:10px;color:#3FD9A6;display:none">Added — look for the September catalogue.</p>
+      </div>
+      <div>
+        <h5>Buy</h5>
+        <a href="#/auctions">Auctions</a><a href="#/sale">September catalogue</a><a href="#/bidding">How to bid</a><a href="#/results">Past results</a><a href="#/private-sales">Private sales</a>
+      </div>
+      <div>
+        <h5>Sell</h5>
+        <a href="#/sell">Sell with us</a><a href="#/sell">Free valuations</a><a href="#/art">Art department</a><a href="#/jewels">Jewels department</a>
+      </div>
+      <div>
+        <h5>Visit</h5>
+        <a href="#/visit">Gallery &amp; saleroom</a><a href="#/exhibitions">Exhibitions</a><a href="#/specialists">Our specialists</a><a href="mailto:saleroom@artogems.example">saleroom@artogems.example</a><a href="tel:+912000000000">+91 20 0000 0000</a>
+      </div>
+    </div>
+    <div class="ftr-b">
+      <span>&copy; 2026 Art &lsquo;O&rsquo; Gems, Pune</span>
+      <span>Conditions of sale &middot; Terms of consignment &middot; Privacy</span>
+    </div>
+  </div>
+</footer>
+<script>
+/* ============ helpers ============ */
+const $=id=>document.getElementById(id);
+const esc=s=>String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;");
+function rng(seed){let s=(seed>>>0)||1;return()=>((s=(s*1664525+1013904223)>>>0)/4294967296)}
+const P=(x,y)=>x.toFixed(1)+","+y.toFixed(1);
+
+/* ============ artwork generators ============ */
+function painting(o){
+  const r=rng(o.seed),W=800,H=o.h||800,c=o.colors,g=[];
+  g.push(`<rect width="${W}" height="${H}" fill="${c[0]}"/>`);
+  for(let i=0;i<o.fields;i++){
+    const w=W*(.35+r()*.75),h=H*(.18+r()*.6),x=-40+r()*(W-w*.4),y=-30+r()*(H-h*.3);
+    g.push(`<rect x="${x.toFixed(0)}" y="${y.toFixed(0)}" width="${w.toFixed(0)}" height="${h.toFixed(0)}" fill="${c[1+((r()*(c.length-1))|0)]}" opacity="${(.22+r()*.5).toFixed(2)}" transform="rotate(${(r()*6-3).toFixed(2)} ${(x+w/2).toFixed(0)} ${(y+h/2).toFixed(0)})"/>`);
+  }
+  if(o.horizon){const y=H*(.42+r()*.24);g.push(`<rect y="${y.toFixed(0)}" width="${W}" height="${(2+r()*5).toFixed(1)}" fill="${o.line}" opacity=".8"/>`)}
+  for(let i=0;i<o.strokes;i++){
+    const x1=r()*W,y1=r()*H,x2=r()*W,y2=r()*H;
+    g.push(`<path d="M${P(x1,y1)} C${P(x1+(r()*400-200),y1+(r()*300-150))} ${P(x2+(r()*400-200),y2+(r()*300-150))} ${P(x2,y2)}" fill="none" stroke="${o.line}" stroke-width="${(1+r()*16).toFixed(1)}" opacity="${(.12+r()*.4).toFixed(2)}" stroke-linecap="round"/>`);
+  }
+  for(let i=0;i<(o.marks||0);i++){
+    const x=r()*W,y=r()*H,s=20+r()*130;
+    g.push(r()>.5?`<circle cx="${x.toFixed(0)}" cy="${y.toFixed(0)}" r="${(s/2).toFixed(0)}" fill="none" stroke="${o.line}" stroke-width="${(1+r()*3).toFixed(1)}" opacity=".5"/>`
+      :`<rect x="${x.toFixed(0)}" y="${y.toFixed(0)}" width="${s.toFixed(0)}" height="${s.toFixed(0)}" fill="${o.line}" opacity="${(.1+r()*.3).toFixed(2)}"/>`);
+  }
+  let crack="";for(let i=0;i<(o.cracks||0);i++){
+    const x=r()*W,y=r()*H;let d=`M${P(x,y)}`,cx=x,cy=y;
+    for(let k=0;k<3;k++){cx+=r()*40-20;cy+=r()*40-20;d+=`L${P(cx,cy)}`}
+    crack+=`<path d="${d}" fill="none" stroke="#0C1512" stroke-width=".7" opacity=".4"/>`;
+  }
+  let grain="";for(let i=0;i<(o.grain||0);i++){
+    grain+=`<circle cx="${(r()*W).toFixed(0)}" cy="${(r()*H).toFixed(0)}" r="${(.5+r()*2.4).toFixed(1)}" fill="${r()>.5?'#F7F2E6':'#0C1512'}" opacity="${(.05+r()*.4).toFixed(2)}"/>`;
+  }
+  return `<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMidYMid slice" role="img" aria-label="${esc(o.alt||'Artwork')}">${g.join("")}${crack}${grain}</svg>`;
+}
+function stone(o){
+  const r=rng(o.seed),S=800,cx=S/2,cy=S/2,R=S*.43,rt=R*.44,f=[];
+  const pt=(a,rad)=>[cx+Math.cos(a*Math.PI/180-Math.PI/2)*rad,cy+Math.sin(a*Math.PI/180-Math.PI/2)*rad];
+  const G=a=>pt(a,R*(.985+r()*.03)),T=k=>pt(45*k+22.5,rt);
+  const sh=(base,l)=>{const n=parseInt(base.slice(1),16),R0=n>>16,G0=(n>>8)&255,B0=n&255,m=v=>Math.max(0,Math.min(255,Math.round(v+l*255)));return `rgb(${m(R0)},${m(G0)},${m(B0)})`};
+  f.push(`<rect width="${S}" height="${S}" fill="${o.bg}"/>`);
+  f.push(`<circle cx="${cx}" cy="${cy}" r="${(R*1.17).toFixed(0)}" fill="${sh(o.hue,-.17)}" opacity=".38"/>`);
+  for(let k=0;k<8;k++){
+    const T0=T(k),T1=T((k+1)%8);
+    const kite=[T0,G(45*k),G(45*k+22.5),G(45*k+45)];
+    f.push(`<polygon points="${kite.map(p=>P(p[0],p[1])).join(" ")}" fill="${sh(o.hue,(r()*.34-.15))}" stroke="${sh(o.hue,.2)}" stroke-width=".6" stroke-opacity=".55"/>`);
+    f.push(`<polygon points="${[T0,T1,G(45*k+45)].map(p=>P(p[0],p[1])).join(" ")}" fill="${sh(o.hue,(r()*.4-.24))}" stroke="${sh(o.hue,.18)}" stroke-width=".6" stroke-opacity=".5"/>`);
+  }
+  const table=[...Array(8)].map((_,k)=>T(k)),tp=table.map(p=>P(p[0],p[1])).join(" ");
+  f.push(`<polygon points="${tp}" fill="${sh(o.hue,.05)}"/>`);
+  f.push(`<polygon points="${tp}" fill="url(#gl${o.seed})"/>`);
+  f.push(`<polygon points="${tp}" fill="none" stroke="${sh(o.hue,.3)}" stroke-width="1.2" stroke-opacity=".7"/>`);
+  f.push(`<path d="M${P(cx-R*.34,cy-R*.3)} L${P(cx-R*.02,cy-R*.46)} L${P(cx+R*.06,cy-R*.3)} L${P(cx-R*.24,cy-R*.14)} Z" fill="#fff" opacity=".5"/>`);
+  f.push(`<circle cx="${(cx+R*.3).toFixed(0)}" cy="${(cy+R*.28).toFixed(0)}" r="${(R*.08).toFixed(0)}" fill="#fff" opacity=".26"/>`);
+  return `<svg viewBox="0 0 ${S} ${S}" preserveAspectRatio="xMidYMid slice" role="img" aria-label="${esc(o.alt||'Gemstone')}"><defs><radialGradient id="gl${o.seed}" cx="35%" cy="30%"><stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient></defs>${f.join("")}</svg>`;
+}
+/* pearl: nacre sphere with overtone */
+function pearl(o){
+  const r=rng(o.seed),S=800,f=[];
+  f.push(`<rect width="${S}" height="${S}" fill="${o.bg}"/>`);
+  f.push(`<defs><radialGradient id="pl${o.seed}" cx="36%" cy="30%"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".28" stop-color="${o.body}"/><stop offset=".72" stop-color="${o.mid}"/><stop offset="1" stop-color="${o.edge}"/></radialGradient>
+  <radialGradient id="ov${o.seed}" cx="62%" cy="72%"><stop offset="0" stop-color="${o.over}" stop-opacity=".55"/><stop offset="1" stop-color="${o.over}" stop-opacity="0"/></radialGradient></defs>`);
+  f.push(`<circle cx="400" cy="400" r="288" fill="url(#pl${o.seed})"/>`);
+  f.push(`<circle cx="400" cy="400" r="288" fill="url(#ov${o.seed})"/>`);
+  for(let i=0;i<70;i++){const a=r()*6.283,d=r()*286;f.push(`<circle cx="${(400+Math.cos(a)*d).toFixed(0)}" cy="${(400+Math.sin(a)*d).toFixed(0)}" r="${(.6+r()*1.6).toFixed(1)}" fill="#fff" opacity="${(.06+r()*.2).toFixed(2)}"/>`)}
+  f.push(`<ellipse cx="316" cy="300" rx="58" ry="40" fill="#fff" opacity=".72" transform="rotate(-22 316 300)"/>`);
+  f.push(`<circle cx="400" cy="400" r="288" fill="none" stroke="#fff" stroke-opacity=".35"/>`);
+  return `<svg viewBox="0 0 ${S} ${S}" preserveAspectRatio="xMidYMid slice" role="img" aria-label="${esc(o.alt||'Pearl')}">${f.join("")}</svg>`;
+}
+/* abstract specialist portrait plate */
+function portrait(seed){
+  const r=rng(seed),S=800,H=1000,f=[];
+  const tone=["#DCE3DE","#CBD8CF","#E2E0D2","#D3DBDD"][seed%4];
+  f.push(`<rect width="${S}" height="${H}" fill="${tone}"/>`);
+  f.push(`<circle cx="400" cy="${(380+r()*40).toFixed(0)}" r="${(150+r()*24).toFixed(0)}" fill="#0B6046" opacity=".16"/>`);
+  f.push(`<path d="M150 ${H} Q400 ${(560+r()*80).toFixed(0)} 650 ${H} Z" fill="#0B6046" opacity=".22"/>`);
+  for(let i=0;i<3;i++)f.push(`<circle cx="400" cy="400" r="${(180+i*46).toFixed(0)}" fill="none" stroke="#052E22" stroke-opacity=".1"/>`);
+  return `<svg viewBox="0 0 ${S} ${H}" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Portrait placeholder">${f.join("")}</svg>`;
+}
+
+/* ============ data ============ */
+const ART=(seed,cols,line,alt,extra)=>{const cfg=Object.assign({seed,fields:5,strokes:5,marks:2,grain:150,cracks:26,colors:cols,line,alt},extra||{});
+  const f=()=>painting(cfg);f.cfg=cfg;return f;};
+const GEM=(seed,hue,bg,alt)=>()=>stone({seed,hue,bg,alt});
+
+const LOTS=[
+ {no:"03",cat:"art",artist:"Meher Anand",title:"Monsoon Interval III",year:"2019",medium:"Oil and marble dust on linen",size:"152 × 122 cm",lo:1800000,hi:2400000,
+  desc:"Signed and dated on the reverse. From the second Monsoon Interval group, in which Anand worked the marble dust into the ground while it was still wet, leaving a surface that reads as stone from a distance and as weather up close.",
+  prov:"Acquired directly from the artist, Bombay, 2019; private collection, Pune.",
+  cond:"Overall good. Fine drying craquelure in the upper green passage, stable. Unlined, on original stretcher. UV shows no retouching.",
+  art:ART(7,["#12201C","#2E8C7A","#3D5A52","#9E6B3A","#1B3A34"],"#E8E2D2","Monsoon Interval III",{grain:150,cracks:26,horizon:true,h:1000})},
+ {no:"07",cat:"art",artist:"Devika Rao Naik",title:"Salt Ledger",year:"2016",medium:"Ink, gouache and thread on Sanganer paper",size:"76 × 56 cm",lo:600000,hi:900000,
+  desc:"One of nine ledger sheets, each recording a week of tidal readings from the Konkan coast as a grid of stitched marks.",
+  prov:"Private consignment, Bombay; thence by descent.",cond:"Minor foxing lower left, visible in raking light. Thread intact throughout. Hinged, not laid down.",
+  art:ART(23,["#E6E2D6","#C7412F","#1B2B3A","#D9B24C"],"#1B2B3A","Salt Ledger",{fields:3,strokes:2,marks:9})},
+ {no:"12",cat:"jewels",artist:"Kashmir sapphire, unheated",title:"Cushion-cut, 4.16 carats",year:"",medium:"Unmounted stone",size:"4.16 ct · 9.8 × 8.6 × 6.1 mm",lo:11000000,hi:16000000,
+  desc:"Velvety cornflower blue with the fine silk typical of the Padar workings. Even saturation, no zoning visible face-up.",
+  prov:"From a Bombay family collection, by descent. Laboratory report, 2024.",cond:"No indication of heating. Minor abrasion to one girdle facet, not visible mounted.",flag:"Lab report",
+  art:GEM(12,"#2A5BA8","#0A1424","Kashmir sapphire")},
+ {no:"15",cat:"art",artist:"Jehangir Mistry",title:"Ballast (Study for a Harbour)",year:"1994",medium:"Bronze with brown patina, edition 2 of 6",size:"Height 61 cm",lo:1200000,hi:1800000,
+  desc:"Cast at the sculptor's Baroda foundry. Stamped, numbered and dated on the underside of the base.",
+  prov:"The sculptor's estate; private collection, Ahmedabad.",cond:"Patina even and original. Light surface dust. No casting faults noted.",
+  art:ART(31,["#171412","#4A3A28","#7A5C34","#2A2420"],"#C99A56","Ballast",{strokes:8,marks:1})},
+ {no:"18",cat:"jewels",artist:"Old mine-cut diamond rivière",title:"Approximately 22.40 carats total",year:"Late 19th century",medium:"Silver-topped gold, 41 stones",size:"Length 39 cm",lo:8500000,hi:12000000,
+  desc:"Forty-one graduated old mine-cut stones in cut-down collets, the largest approximately 1.20 carats.",
+  prov:"Property of a lady, Hyderabad.",cond:"Later clasp, well matched. Two collets with old solder repairs. Stones bright, no chips seen under 10× loupe.",
+  art:GEM(18,"#C9CBD0","#14171C","Old mine-cut diamond rivière")},
+ {no:"21",cat:"art",artist:"Ayesha Qureshi",title:"Nine Rooms, One Window",year:"2021",medium:"Acrylic and screenprint on canvas",size:"183 × 183 cm",lo:2200000,hi:3000000,
+  desc:"The largest canvas from the Rooms series, screenprinted in nine passes over a hand-painted violet ground.",
+  prov:"The artist's studio, Lahore; private collection, Singapore. Exhibited Colombo, 2022.",cond:"Excellent. Unvarnished, as intended.",flag:"Exhibited",
+  art:ART(44,["#1A1622","#D2436E","#3E3160","#E2CDA6","#2E8C7A"],"#F4F3ED","Nine Rooms, One Window",{fields:7,strokes:2,marks:6})},
+ {no:"24",cat:"jewels",artist:"Paraíba-type tourmaline",title:"Oval, 3.02 carats",year:"",medium:"Unmounted stone",size:"3.02 ct · 10.1 × 7.4 mm",lo:4000000,hi:6000000,
+  desc:"Copper-bearing tourmaline of Mozambique origin, the colour a saturated neon blue-green that holds under incandescent light.",
+  prov:"Acquired Bangkok, 2018; private collection.",cond:"Minor clarity enhancement noted in the laboratory report. Well cut, no window.",flag:"Lab report",
+  art:GEM(24,"#17A9A2","#04191C","Paraíba-type tourmaline")},
+ {no:"27",cat:"art",artist:"Rustom Kharas",title:"Godhuli, No. 4",year:"1971",medium:"Oil on board",size:"61 × 91 cm",lo:900000,hi:1400000,
+  desc:"A late dusk landscape from the Panchgani years, worked wet-into-wet in a single sitting.",
+  prov:"Gift of the artist to the present owner's father, 1972.",cond:"Board slightly bowed, stable. Small loss at upper right edge, retouched.",
+  art:ART(52,["#2A1D14","#B4541F","#D9A441","#5A3A22"],"#F1E3C4","Godhuli, No. 4",{horizon:true,fields:4})},
+ {no:"31",cat:"jewels",artist:"Natural saltwater pearl necklace",title:"Single strand, 61 pearls",year:"c. 1920",medium:"Natural pearls, diamond-set clasp",size:"Length 46 cm · 4.1–8.9 mm",lo:5500000,hi:7500000,
+  desc:"Graduated Basra pearls of fine lustre and pale cream body colour with a rose overtone, well matched throughout.",
+  prov:"By repute assembled in Bombay in the 1920s; by descent.",cond:"Natural, untreated, confirmed by X-radiography. Restrung 2023. Clasp with old-cut diamonds.",flag:"Natural",
+  art:()=>pearl({seed:31,bg:"#131A19",body:"#F5EFE2",mid:"#E4DFD3",edge:"#B9B7AC",over:"#E7B7C8",alt:"Natural pearl"})},
+ {no:"34",cat:"art",artist:"Kabir Sengupta",title:"Untitled (Standing Figure)",year:"1988",medium:"Charcoal and wash on paper",size:"104 × 71 cm",lo:350000,hi:550000,
+  desc:"A large single-session drawing from the Santiniketan period.",
+  prov:"Private collection, Calcutta.",cond:"Light time-staining at the sheet edges. Two small pinholes in the margins.",
+  art:ART(61,["#EDE7DA","#2A2A28","#6E6A5E"],"#1C1B19","Untitled (Standing Figure)",{fields:2,strokes:9,marks:0})},
+ {no:"38",cat:"jewels",artist:"Imperial jadeite bangle",title:"Natural, untreated (Type A)",year:"",medium:"Jadeite jade",size:"55.2 mm inner diameter",lo:3000000,hi:4500000,
+  desc:"Even, saturated green with fine translucency and a smooth, waxy polish.",
+  prov:"Private collection, Singapore.",cond:"Natural colour, no polymer impregnation, per laboratory report. No cracks or repairs.",flag:"Lab report",
+  art:GEM(38,"#2F8F52","#08160E","Imperial jadeite bangle")},
+ {no:"41",cat:"art",artist:"Nilufer Damania",title:"The Long Verandah",year:"2003",medium:"Egg tempera on gesso panel",size:"46 × 122 cm",lo:750000,hi:1100000,
+  desc:"A horizontal panel of shuttered light, built in some forty tempera layers.",
+  prov:"Acquired from the artist's Bombay dealer, 2004.",cond:"Excellent. Panel sound, no cradling required.",
+  art:ART(70,["#EFE6D2","#7FA08E","#C3B291","#3E4F46"],"#2C3A33","The Long Verandah",{fields:6,strokes:1,horizon:true})},
+ {no:"46",cat:"jewels",artist:"Burmese ruby and diamond ring",title:"Cushion-cut, 2.51 carats",year:"c. 1960",medium:"Platinum, ruby and diamond",size:"2.51 ct centre stone",lo:6500000,hi:9000000,
+  desc:"Pigeon's-blood red, no indication of heating, flanked by two tapered baguette diamonds.",
+  prov:"Property of a gentleman, Delhi.",cond:"No indication of heating per laboratory report. Shank resized once; setting secure.",flag:"Unheated",
+  art:GEM(46,"#B01F3C","#1A0A0E","Burmese ruby ring")},
+ {no:"49",cat:"art",artist:"Thomas Ambrose Fernandes",title:"Ferry, Late Crossing",year:"1996",medium:"Watercolour on handmade paper",size:"38 × 56 cm",lo:180000,hi:280000,
+  desc:"A quick harbour study, signed lower right.",prov:"Private collection, Goa.",cond:"Slight cockling from original mounting. Colours fresh, no fading.",
+  art:ART(83,["#E9EAE2","#4E7A8C","#2C4653","#C9A15A"],"#22323A","Ferry, Late Crossing",{fields:3,strokes:6,marks:1})},
+ {no:"53",cat:"jewels",artist:"Colombian emerald, minor oil",title:"Octagonal step-cut, 6.84 carats",year:"",medium:"Unmounted stone",size:"6.84 ct · 13.2 × 10.6 mm",lo:9000000,hi:13000000,
+  desc:"Muzo-type green of exceptional openness for the size, with the typical garden visible only under magnification.",
+  prov:"Acquired Geneva, 2011.",cond:"Minor clarity enhancement (oil), per laboratory report. Two small girdle nicks.",flag:"Lab report",
+  art:GEM(53,"#0E7A4E","#04150F","Colombian emerald")},
+ {no:"57",cat:"art",artist:"Ranjana Bhatt",title:"Wall Study (Dhrangadhra)",year:"2014",medium:"Pigment and lime on canvas",size:"122 × 91 cm",lo:450000,hi:700000,
+  desc:"Lime and raw pigment applied as a fresco would be, on stretched canvas.",prov:"The artist; private collection, Baroda.",
+  cond:"Some inherent surface friability at the lower edge, consistent with the medium. Stable.",
+  art:ART(91,["#E5DCCB","#B98C5A","#7E6547","#3B3227"],"#F6F0E2","Wall Study",{fields:5,strokes:3,marks:3})},
+ {no:"61",cat:"jewels",artist:"Art Deco diamond bracelet",title:"Geometric line, approx. 14.60 carats",year:"c. 1928",medium:"Platinum and diamond",size:"Length 18 cm",lo:4500000,hi:6500000,
+  desc:"Old European and baguette-cut diamonds in a stepped geometric line, French assay marks.",
+  prov:"Property of a lady, Bombay.",cond:"One baguette replaced. Tongue clasp with figure-of-eight safeties, working.",
+  art:GEM(61,"#DDE2E8","#101418","Art Deco diamond bracelet")},
+ {no:"64",cat:"art",artist:"Ismail Pathan",title:"Notation for a Crowd",year:"2018",medium:"Screenprint and graphite on paper, 8/25",size:"70 × 50 cm",lo:120000,hi:180000,
+  desc:"From an edition of twenty-five, each sheet worked over by hand in graphite.",prov:"Direct from the printer, Chennai.",
+  cond:"Excellent, in the original portfolio wrapper.",
+  art:ART(97,["#F1EDE1","#1D1D1B","#D14D2E"],"#1D1D1B","Notation for a Crowd",{fields:4,strokes:2,marks:7})}
+];
+const FMT=n=>"₹"+n.toLocaleString("en-IN");
+const estOf=l=>FMT(l.lo)+" – "+FMT(l.hi);
+const idx=no=>LOTS.findIndex(l=>l.no===no);
+const artCache={};
+const artOf=i=>artCache[i]||(artCache[i]=LOTS[i].art());
+const hiCache={};
+const artHi=i=>hiCache[i]||(hiCache[i]=LOTS[i].art.cfg?painting(Object.assign({},LOTS[i].art.cfg,{grain:1100,cracks:170})):artOf(i));
+
+const SALES=[
+ {slug:"sale",name:"The September Evening Sale",when:"Thursday 24 September 2026, 7:00 pm IST",view:"19–23 September, 11:00–19:00 daily",lots:74,state:"open",
+  blurb:"Modern and contemporary art alongside coloured stones and period jewels, sold in one session."},
+ {slug:"",name:"Works on Paper &amp; Editions",when:"Saturday 17 October 2026, 3:00 pm IST",view:"13–16 October",lots:118,state:"soon",
+  blurb:"Prints, drawings and photographs, most estimated below ₹5,00,000. Consignments close 12 September."},
+ {slug:"",name:"The Winter Jewels Sale",when:"Thursday 3 December 2026, 7:00 pm IST",view:"28 November – 2 December",lots:96,state:"soon",
+  blurb:"Signed jewellery, unmounted stones and natural pearls. Consignments close 6 November."}
+];
+const RESULTS=[
+ {sale:"The June Evening Sale, 2026",lot:"Lot 22",what:"Kashmir sapphire, 5.02 ct, unheated",est:"₹1.2 – 1.8 Cr",ham:"₹2.34 Cr"},
+ {sale:"The June Evening Sale, 2026",lot:"Lot 08",what:"Meher Anand, <i>Weather Book</i>, 2017",est:"₹18 – 24 L",ham:"₹41.5 L"},
+ {sale:"The June Evening Sale, 2026",lot:"Lot 44",what:"Natural pearl and diamond brooch, c. 1910",est:"₹22 – 30 L",ham:"₹28 L"},
+ {sale:"Works on Paper, April 2026",lot:"Lot 61",what:"Kabir Sengupta, <i>Two Seated Figures</i>, 1986",est:"₹3 – 5 L",ham:"₹9.2 L"},
+ {sale:"Works on Paper, April 2026",lot:"Lot 12",what:"Ismail Pathan, portfolio of nine screenprints",est:"₹1.5 – 2.5 L",ham:"₹4.1 L"},
+ {sale:"The Winter Jewels Sale, 2025",lot:"Lot 30",what:"Colombian emerald, 8.11 ct, minor oil",est:"₹90 L – 1.3 Cr",ham:"₹1.71 Cr"},
+ {sale:"The Winter Jewels Sale, 2025",lot:"Lot 55",what:"Art Deco diamond bandeau, c. 1925",est:"₹40 – 60 L",ham:"Passed"},
+ {sale:"The Spring Sale, 2025",lot:"Lot 19",what:"Rustom Kharas, <i>Godhuli, No. 1</i>, 1969",est:"₹10 – 15 L",ham:"₹33.8 L"}
+];
+const TEAM=[
+ {n:"Aparna Deshmukh",r:"Founder &amp; Auctioneer",b:"Took the rostrum at the first Art 'O' Gems sale in 2009 and has called every evening sale since. Cataloguing background at a Bombay house."},
+ {n:"Farhan Kotwal",r:"Head, Modern &amp; Contemporary Art",b:"Fifteen years in Indian modernism, with a research interest in artists working outside Bombay and Delhi."},
+ {n:"Ritu Bhandari",r:"Head, Jewels &amp; Coloured Stones",b:"Gemmologist. Handles origin and treatment questions, and decides which stones go to the laboratory before they go in the catalogue."},
+ {n:"Samuel Tirkey",r:"Senior Specialist, Works on Paper",b:"Prints, drawings and photographs. Writes most of the condition reports and is the reason they are worth reading."},
+ {n:"Zoya Merchant",r:"Head of Private Sales",b:"Places single works and whole collections quietly, where an auction is not the right room for the object."},
+ {n:"Prakash Iyer",r:"Registrar &amp; Client Accounts",b:"Registration, deposits, shipping, export paperwork. The person who actually gets the object to your wall."}
+];
+const EXHIBITIONS=[
+ {when:"5 – 30 September 2026",t:"Marble Dust: Meher Anand, Ten Years",s:"Gallery, ground floor",
+  d:"Twenty-two paintings and eleven working drawings, half of them lent by collectors and not for sale. Runs alongside the September viewing.",st:"Current"},
+ {when:"10 October – 8 November 2026",t:"Small Stones, Big Claims",s:"Gallery, mezzanine",
+  d:"An exhibition about gemmological testing: forty stones shown next to their laboratory reports, including six that failed.",st:"Next"},
+ {when:"14 March – 19 April 2026",t:"The Konkan Sheets",s:"Gallery, ground floor",
+  d:"Devika Rao Naik's tidal ledgers shown as a complete set of nine for the first time.",st:"Past"},
+ {when:"9 November – 14 December 2025",t:"Bronze in the Round",s:"Courtyard and gallery",
+  d:"Post-war Indian sculpture, with three foundry demonstrations open to the public.",st:"Past"}
+];
+
+/* ============ shared partials ============ */
+const NAV=[["#/auctions","Auctions"],["#/sale","Catalogue"],["#/art","Art"],["#/jewels","Jewels"],["#/exhibitions","Exhibitions"],["#/private-sales","Private sales"],["#/sell","Sell with us"],["#/specialists","About"],["#/visit","Visit"]];
+$("mainnav").innerHTML=NAV.map(([h,t])=>`<a href="${h}">${t}</a>`).join("");
+$("drawernav").innerHTML=NAV.map(([h,t])=>`<a href="${h}">${t}</a>`).join("")+`<a href="#/bidding" style="color:var(--emerald)">Register to bid</a>`;
+
+const crumbs=(...parts)=>`<div class="crumbs"><div class="wrap crumbs-in"><a href="#/">Home</a>${parts.map(p=>` <span>/</span> ${p[1]?`<a href="${p[1]}">${p[0]}</a>`:`<span>${p[0]}</span>`}`).join("")}</div></div>`;
+const phead=(eyebrow,h1,lead,aside)=>`<section class="phead"><div class="wrap phead-grid">
+  <div><p class="eyebrow">${eyebrow}</p><h1>${h1}</h1>${lead?`<p class="lead">${lead}</p>`:""}</div>
+  <div>${aside||""}</div></div></section>`;
+const lotCard=i=>{const l=LOTS[i];return `<a class="card rise" href="#/lot/${l.no}">
+  <div class="card-art">${artOf(i)}<span class="card-no">Lot ${l.no}</span>${l.flag?`<span class="card-flag">${l.flag}</span>`:""}</div>
+  <div class="card-b"><p class="who">${l.artist}</p><h4>${l.title}</h4><p class="muted" style="font-size:.83rem">${[l.year,l.medium].filter(Boolean).join(" · ")}</p>
+  <p class="est">Estimate ${estOf(l)}</p></div></a>`};
+const cta=(t,p,b1,h1,b2,h2)=>`<section class="band-s dark"><div class="wrap" style="display:flex;justify-content:space-between;gap:30px;align-items:center;flex-wrap:wrap">
+  <div><h2 style="max-width:20ch">${t}</h2><p class="lead" style="margin-top:14px">${p}</p></div>
+  <div style="display:flex;gap:12px;flex-wrap:wrap"><a class="btn btn-gh" href="${h1}">${b1}</a>${b2?`<a class="btn btn-gh" href="${h2}">${b2}</a>`:""}</div></div></section>`;
+
+/* ============ pages ============ */
+const PAGES={};
+
+PAGES.home=()=>`
+<section class="hero"><div class="wrap hero-in">
+  <div>
+    <p class="eyebrow rise">Evening Sale &middot; Thu 24 September 2026 &middot; 7:00 pm IST</p>
+    <h1 class="rise">Look at it the way a <em>specialist</em> would.</h1>
+    <p class="lead rise">Art &lsquo;O&rsquo; Gems is a gallery and auction house for modern art, coloured stones and period jewels. Drag the loupe across the canvas &mdash; the craquelure, the marble dust, the pigment sitting proud of the weave. Then decide what it&rsquo;s worth to you.</p>
+    <div class="hero-cta rise"><a class="btn btn-em" href="#/sale">Browse the September catalogue</a><a class="btn" href="#/sell">Sell with us</a></div>
+    <p class="hero-note mono rise">74 lots &mdash; 41 paintings, works on paper and sculpture; 33 jewels and unmounted stones. Viewing daily from 19 September, free and open to all.</p>
+  </div>
+  <figure class="plate-wrap rise">
+    <div class="plate" id="plate"><div id="heroArt"></div>
+      <div class="loupe" id="loupe" aria-hidden="true"><div class="loupe-inner" id="loupeInner"></div><div class="cross"><i></i><i></i><i></i><i></i></div></div>
+      <div class="plate-tag"><span>Lot 03</span><span class="hint">Move to inspect</span></div></div>
+    <figcaption class="caption"><b>Meher Anand</b>, <i>Monsoon Interval III</i>, 2019. Oil and marble dust on linen, 152 &times; 122 cm. Estimate &#8377;18,00,000 &ndash; 24,00,000.</figcaption>
+  </figure>
+</div></section>
+
+<section class="strip"><dl class="wrap strip-in">
+  <div class="cell"><dt>Viewing</dt><dd>19&ndash;23 September <span>&middot; 11:00&ndash;19:00 daily</span></dd></div>
+  <div class="cell"><dt>The sale</dt><dd>24 September <span>&middot; 7:00 pm IST</span></dd></div>
+  <div class="cell"><dt>Bidding</dt><dd>In the room, telephone, absentee, online</dd></div>
+  <div class="cell"><dt>Registration</dt><dd><span class="pulse"></span>Open until 23 Sep, 18:00</dd></div>
+</dl></section>
+
+<section class="band"><div class="wrap">
+  <div class="shead rise"><div><p class="eyebrow">Highlights</p><h2 style="margin-top:16px">Eight lots worth crossing town for.</h2></div>
+    <a class="btn" href="#/sale">All 74 lots</a></div>
+  <div class="grid g4">${[0,2,5,8,4,6,10,12].map(lotCard).join("")}</div>
+</div></section>
+
+<section class="band" style="background:var(--pearl-2);border-block:1px solid var(--line-2)"><div class="wrap">
+  <p class="eyebrow rise">Two departments, one saleroom</p>
+  <h2 class="rise" style="margin-top:16px;max-width:22ch">We sell what people keep in the light, and what they keep in the safe.</h2>
+  <div class="grid g2" style="margin-top:clamp(30px,4vw,48px)">
+    <a class="card rise" href="#/art" style="display:grid;grid-template-columns:150px 1fr;gap:22px;align-items:center">
+      <div class="card-art">${painting({seed:70,fields:6,strokes:1,marks:0,grain:400,cracks:30,horizon:true,colors:["#EFE6D2","#7FA08E","#C3B291","#3E4F46"],line:"#2C3A33",alt:"Art department"})}</div>
+      <div><h3>Modern &amp; Contemporary Art</h3><p class="muted" style="margin-top:8px;font-size:.92rem">Post-1947 painting, works on paper, editions and sculpture. Every lot with a written condition report and an ownership line we can stand behind.</p>
+      <p class="mono em" style="margin-top:14px">View the department &rarr;</p></div></a>
+    <a class="card rise" href="#/jewels" style="display:grid;grid-template-columns:150px 1fr;gap:22px;align-items:center">
+      <div class="card-art">${stone({seed:53,hue:"#0E7A4E",bg:"#04150F",alt:"Jewels department"})}</div>
+      <div><h3>Jewels &amp; Coloured Stones</h3><p class="muted" style="margin-top:8px;font-size:.92rem">Unmounted stones, natural pearls and period jewellery. Origin and treatment go in the lot line, not the footnote.</p>
+      <p class="mono em" style="margin-top:14px">View the department &rarr;</p></div></a>
+  </div>
+</div></section>
+
+<section class="band"><div class="wrap">
+  <div class="shead rise"><div><p class="eyebrow">Recent results</p><h2 style="margin-top:16px">What things actually sold for.</h2></div><a class="btn" href="#/results">All results</a></div>
+  <div class="tbl-wrap rise"><table class="tbl"><thead><tr><th>Lot</th><th>Description</th><th>Estimate</th><th style="text-align:right">Hammer</th></tr></thead>
+  <tbody>${RESULTS.slice(0,5).map(r=>`<tr><td class="num">${r.lot}</td><td>${r.what}<br><span class="muted" style="font-size:.8rem">${r.sale}</span></td><td class="num muted">${r.est}</td><td style="text-align:right" class="${r.ham==="Passed"?"num muted":"sold"}">${r.ham}</td></tr>`).join("")}</tbody></table></div>
+</div></section>
+
+<section class="band" style="background:var(--nacre)"><div class="wrap" style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,4vw,64px);align-items:center">
+  <div class="rise"><p class="eyebrow">Sell with us</p><h2 style="margin-top:16px;max-width:15ch">Bring us the thing in the cupboard.</h2>
+    <p class="lead" style="margin-top:20px">Valuations are free and take about a week. If we think it belongs in a different saleroom, we&rsquo;ll say that too. Consignments for the December jewels sale close on 6 November 2026.</p>
+    <a class="btn btn-em" href="#/sell" style="margin-top:26px">Request a valuation</a></div>
+  <div class="rise"><p class="mono muted">What to send with your first email</p>
+    <ul class="checklist">
+      <li>Photographs: the whole work, the signature, the back, and any damage</li>
+      <li>Dimensions, and the medium if you know it</li>
+      <li>Anything on where it came from &mdash; a bill, a letter, a family story</li>
+      <li>For stones: carat weight and any laboratory report, however old</li>
+      <li>What you think it&rsquo;s worth, if you have a number in mind</li>
+    </ul></div>
+</div></section>
+${cta("The gallery is open whether or not there is a sale on.","Koregaon Park, Pune. Tuesday to Sunday, 11:00–19:00. No appointment needed.","Plan a visit","#/visit","See exhibitions","#/exhibitions")}`;
+
+PAGES.auctions=()=>`${crumbs(["Auctions"])}
+${phead("Auctions","Three sales between here and December.","Every sale is held in the Pune saleroom and streamed for online bidders. Catalogues go online about three weeks before each sale.",
+  `<div class="panel panel-nacre"><p class="mono muted">Next on the rostrum</p><h3 style="margin:10px 0 8px">The September Evening Sale</h3><p class="muted" style="font-size:.9rem">Thursday 24 September, 7:00 pm IST</p><a class="btn btn-em btn-sm" href="#/sale" style="margin-top:16px">View the catalogue</a></div>`)}
+<section class="band"><div class="wrap">
+  <div class="rows">${SALES.map(s=>`<div class="row rise">
+    <div class="when">${s.state==="open"?'<span class="pulse"></span>Bidding open':"Consignments open"}<br><span class="muted" style="text-transform:none;letter-spacing:0">${s.lots} lots</span></div>
+    <div><h3>${s.name}</h3><p>${s.blurb}</p>
+      <p class="mono muted" style="margin-top:12px">${s.when} &nbsp;&middot;&nbsp; Viewing ${s.view}</p></div>
+    <div>${s.slug?`<a class="btn btn-em btn-sm" href="#/sale">Catalogue</a>`:`<a class="btn btn-sm" href="#/sell">Consign to this sale</a>`}</div>
+  </div>`).join("")}</div>
+  <div class="stats rise" style="margin-top:clamp(40px,5vw,70px)">
+    <div class="stat"><div class="n">2009</div><div class="l">First sale</div></div>
+    <div class="stat"><div class="n">86%</div><div class="l">Lots sold, last four sales</div></div>
+    <div class="stat"><div class="n">15%</div><div class="l">Buyer&rsquo;s premium</div></div>
+    <div class="stat"><div class="n">7 days</div><div class="l">Payment terms</div></div>
+  </div>
+</div></section>
+${cta("New to bidding here?","Registration takes about ten minutes, and the terms are four paragraphs long, not forty.","How to bid","#/bidding","Past results","#/results")}`;
+
+PAGES.sale=(q)=>{
+  const f=q||"all";
+  const list=LOTS.map((l,i)=>i).filter(i=>f==="all"||LOTS[i].cat===f);
+  return `${crumbs(["Auctions","#/auctions"],["September Evening Sale"])}
+${phead("Sale 2609 &middot; 24 September 2026","The September Evening Sale","Seventy-four lots, sold in one session from 7:00 pm. Eighteen are catalogued online below; the printed catalogue covers all lots and is posted free on request.",
+  `<div class="panel"><dl class="spec" style="margin:0;border-top:0">
+    <div><dt>Viewing</dt><dd>19–23 Sep, 11:00–19:00</dd></div>
+    <div><dt>Sale begins</dt><dd>24 Sep, 7:00 pm IST</dd></div>
+    <div><dt>Registration</dt><dd>Closes 23 Sep, 18:00</dd></div>
+    <div><dt>Premium</dt><dd>15% + GST</dd></div></dl>
+  <a class="btn btn-em btn-sm" href="#/bidding" style="margin-top:16px">Register to bid</a></div>`)}
+<section class="band"><div class="wrap">
+  <div class="filters">
+    <a class="chip ${f==="all"?"on":""}" href="#/sale">All lots</a>
+    <a class="chip ${f==="art"?"on":""}" href="#/sale/art">Art</a>
+    <a class="chip ${f==="jewels"?"on":""}" href="#/sale/jewels">Jewels &amp; stones</a>
+    <span class="count">${list.length} of 74 lots online</span>
+  </div>
+  <div class="grid g4">${list.map(lotCard).join("")}</div>
+  <p class="muted rise" style="margin-top:34px;font-size:.88rem">Estimates exclude the buyer&rsquo;s premium of 15% on the hammer price, plus applicable GST. <a href="#/bidding" class="em">Full conditions of sale</a></p>
+</div></section>`;
+};
+
+PAGES.lot=(no)=>{
+  const i=idx(no); if(i<0) return PAGES.missing();
+  const l=LOTS[i],others=LOTS.map((x,k)=>k).filter(k=>k!==i&&LOTS[k].cat===l.cat).slice(0,4);
+  return `${crumbs(["Auctions","#/auctions"],["September Evening Sale","#/sale"],["Lot "+l.no])}
+<section class="band"><div class="wrap lotpage">
+  <div>
+    <figure class="plate-wrap rise"><div class="plate sq" id="plate"><div id="heroArt"></div>
+      <div class="loupe" id="loupe" aria-hidden="true"><div class="loupe-inner" id="loupeInner"></div><div class="cross"><i></i><i></i><i></i><i></i></div></div>
+      <div class="plate-tag"><span>Lot ${l.no}</span><span class="hint">Move to inspect</span></div></div>
+      <figcaption class="caption">Move the loupe across the surface. Detail images and a written condition report are sent on request.</figcaption></figure>
+    <div class="blocks rise">
+      <div class="block"><h4>Catalogue note</h4><p>${l.desc}</p></div>
+      <div class="block"><h4>Provenance</h4><p>${l.prov}</p></div>
+      <div class="block"><h4>Condition</h4><p>${l.cond}</p><p class="muted" style="font-size:.83rem;margin-top:10px">Condition reports are our opinion, honestly given, and not a warranty. Examine the lot yourself or send someone who will.</p></div>
+      <div class="block"><h4>Viewing</h4><p>19–23 September, 11:00–19:00 daily, at the Pune saleroom. No appointment needed.</p></div>
+    </div>
+  </div>
+  <aside class="lotside rise">
+    <p class="lotmeta">Lot ${l.no} &middot; ${l.cat==="art"?"Modern &amp; Contemporary Art":"Jewels &amp; Coloured Stones"}</p>
+    <h1 style="font-size:clamp(1.8rem,3vw,2.5rem)">${l.title}</h1>
+    <p style="margin-top:10px;font-size:1.05rem">${l.artist}${l.year?`, ${l.year}`:""}</p>
+    <div class="pricebox">
+      <p class="k">Estimate</p><p class="v">${estOf(l)}</p>
+      <p class="muted" style="font-size:.8rem">Plus 15% buyer&rsquo;s premium and GST. Reserve is not above the low estimate.</p>
+      <div class="btns"><a class="btn btn-em" href="#/bidding">Register to bid</a><a class="btn" href="#/sell">Ask a specialist</a></div>
+    </div>
+    <dl class="spec">
+      <div><dt>Medium</dt><dd>${l.medium}</dd></div>
+      <div><dt>Dimensions</dt><dd>${l.size}</dd></div>
+      ${l.year?`<div><dt>Date</dt><dd>${l.year}</dd></div>`:""}
+      <div><dt>Sale</dt><dd>September Evening Sale, 24 Sep 2026</dd></div>
+      <div><dt>Department</dt><dd>${l.cat==="art"?"Art":"Jewels"}</dd></div>
+    </dl>
+    <div class="panel panel-nacre" style="margin-top:22px">
+      <p class="mono muted">Bid increments near this estimate</p>
+      <p style="margin-top:8px;font-size:.9rem">${l.lo<500000?"₹25,000 steps":l.lo<2000000?"₹1,00,000 steps":"₹2,50,000 steps, then at the auctioneer’s discretion"}</p>
+    </div>
+  </aside>
+</div></section>
+<section class="band" style="background:var(--pearl-2);border-top:1px solid var(--line-2)"><div class="wrap">
+  <div class="shead rise"><h2>More in this department</h2><a class="btn" href="#/sale/${l.cat}">All ${l.cat==="art"?"art":"jewels"} lots</a></div>
+  <div class="grid g4">${others.map(lotCard).join("")}</div>
+</div></section>`;
+};
+
+PAGES.art=()=>`${crumbs(["Departments"],["Modern &amp; Contemporary Art"])}
+${phead("Department","Modern &amp; Contemporary Art","Post-1947 painting, works on paper, print editions and sculpture, with a standing interest in artists who worked outside Bombay and Delhi. Two dedicated sales a year, plus works on paper in October.",
+  `<div class="panel"><p class="mono muted">Head of department</p><h3 style="margin:8px 0 4px">Farhan Kotwal</h3><p class="muted" style="font-size:.88rem">art@artogems.example &middot; +91 20 0000 0002</p><a class="btn btn-sm" href="#/specialists" style="margin-top:16px">Meet the team</a></div>`)}
+<section class="band"><div class="wrap">
+  <div class="grid g2" style="align-items:start">
+    <div class="rise stack">
+      <h3>What we take</h3>
+      <p class="muted">Paintings, drawings, prints in numbered editions, photographs and sculpture, generally from 1947 onward. We are glad to look at anything, but we do best with post-war Indian modernism, contemporary work with an exhibition history, and single-owner collections assembled with some conviction.</p>
+      <p class="muted">We do not sell unattributed decorative pictures, reproductions, or works we cannot trace. If a signature is the only evidence, that is not evidence.</p>
+      <h3 style="margin-top:14px">How we catalogue</h3>
+      <p class="muted">Every lot gets an ownership line, a written condition report, and where relevant a note on restoration. Attributions follow the usual ladder &mdash; by the artist, attributed to, studio of, after &mdash; and we use the lower rung when we are not certain.</p>
+    </div>
+    <div class="rise"><div class="panel">
+      <p class="mono muted">Department calendar 2026</p>
+      <dl class="spec" style="margin-top:14px">
+        <div><dt>17 Oct</dt><dd>Works on Paper &amp; Editions<br><span class="muted">consignments close 12 Sep</span></dd></div>
+        <div><dt>24 Sep</dt><dd>September Evening Sale<br><span class="muted">catalogue online now</span></dd></div>
+        <div><dt>5–30 Sep</dt><dd>Exhibition: Marble Dust</dd></div>
+      </dl>
+      <a class="btn btn-em btn-sm" href="#/sell" style="margin-top:18px">Consign a work</a>
+    </div></div>
+  </div>
+  <div class="shead rise" style="margin-top:clamp(48px,6vw,84px)"><h2>Art in the September sale</h2><a class="btn" href="#/sale/art">All art lots</a></div>
+  <div class="grid g4">${LOTS.map((l,i)=>i).filter(i=>LOTS[i].cat==="art").slice(0,8).map(lotCard).join("")}</div>
+</div></section>
+${cta("Not sure whether it is auction material?","Send four photographs and the dimensions. We will tell you within a week, at no charge.","Request a valuation","#/sell","Jewels department","#/jewels")}`;
+
+PAGES.jewels=()=>`${crumbs(["Departments"],["Jewels &amp; Coloured Stones"])}
+${phead("Department","Jewels &amp; Coloured Stones","Unmounted stones, natural pearls, signed jewellery and period pieces. Coloured stones above one carat are sold with an independent laboratory report naming origin and treatment.",
+  `<div class="panel"><p class="mono muted">Head of department</p><h3 style="margin:8px 0 4px">Ritu Bhandari</h3><p class="muted" style="font-size:.88rem">jewels@artogems.example &middot; +91 20 0000 0003</p><a class="btn btn-sm" href="#/specialists" style="margin-top:16px">Meet the team</a></div>`)}
+<section class="band"><div class="wrap">
+  <div class="grid g2" style="align-items:start">
+    <div class="rise stack">
+      <h3>Origin and treatment, in the lot line</h3>
+      <p class="muted">Where a stone is heated, oiled, filled, diffused or dyed, we say so in the lot title or the first line of the description &mdash; not in a footnote at the back of the catalogue. Where a report is more than five years old, we send the stone out again at our expense.</p>
+      <h3 style="margin-top:14px">Laboratories we use</h3>
+      <p class="muted">Reports come from independent laboratories with no interest in the sale. We will name the laboratory before you bid, and we will tell you if two reports on the same stone disagree, which happens more often than the trade likes to admit.</p>
+      <h3 style="margin-top:14px">Pearls</h3>
+      <p class="muted">Natural pearls are confirmed by X-radiography before cataloguing. Cultured strands are described as cultured. Restringing dates are given, because the string is not the pearl but it is what breaks.</p>
+    </div>
+    <div class="rise"><div class="panel panel-nacre">
+      <p class="mono muted">What a lot line tells you</p>
+      <dl class="spec" style="margin-top:14px">
+        <div><dt>Weight</dt><dd>Carats, to two places</dd></div>
+        <div><dt>Origin</dt><dd>Named when a laboratory will name it</dd></div>
+        <div><dt>Treatment</dt><dd>Stated, including &ldquo;none detected&rdquo;</dd></div>
+        <div><dt>Report</dt><dd>Laboratory and date</dd></div>
+        <div><dt>Condition</dt><dd>Chips, repairs, replaced stones</dd></div>
+      </dl>
+    </div></div>
+  </div>
+  <div class="shead rise" style="margin-top:clamp(48px,6vw,84px)"><h2>Jewels in the September sale</h2><a class="btn" href="#/sale/jewels">All jewels lots</a></div>
+  <div class="grid g4">${LOTS.map((l,i)=>i).filter(i=>LOTS[i].cat==="jewels").slice(0,8).map(lotCard).join("")}</div>
+</div></section>
+${cta("Winter Jewels Sale, 3 December","Consignments close 6 November. Free valuations, and we will tell you if a stone should go to the laboratory first.","Consign a jewel","#/sell","Art department","#/art")}`;
+
+PAGES.exhibitions=()=>`${crumbs(["Exhibitions"])}
+${phead("Gallery","Exhibitions run whether or not anything is for sale.","The ground-floor gallery shows four or five exhibitions a year. Entry is free, loans are welcome, and about half of what hangs is not for sale.")}
+<section class="band"><div class="wrap"><div class="rows">
+  ${EXHIBITIONS.map((e,k)=>`<div class="row rise">
+    <div class="when">${e.st}<br><span class="muted" style="text-transform:none;letter-spacing:0">${e.when}</span></div>
+    <div><h3>${e.t}</h3><p>${e.d}</p><p class="mono muted" style="margin-top:10px">${e.s}</p></div>
+    <div>${e.st==="Past"?`<span class="mono muted">Closed</span>`:`<a class="btn btn-sm ${e.st==="Current"?"btn-em":""}" href="#/visit">Plan a visit</a>`}</div>
+  </div>`).join("")}
+</div>
+<div class="panel panel-em rise" style="margin-top:clamp(40px,5vw,70px)">
+  <p class="eyebrow">Lending</p>
+  <h3 style="margin:14px 0 10px;max-width:24ch">If you own something that belongs in one of these rooms, we would like to borrow it.</h3>
+  <p style="max-width:64ch">Loans are insured wall-to-wall at our cost, transported by our handlers, and returned with a condition report on both ends. Lenders are credited as they wish, including anonymously.</p>
+  <a class="btn btn-gh" href="#/visit" style="margin-top:20px">Talk to the gallery</a>
+</div></div></section>`;
+
+PAGES["private-sales"]=()=>`${crumbs(["Private sales"])}
+${phead("Private sales","Some objects should not be sold in a room full of people.","A private sale is the right route when a work is exceptionally large, when the market is thin, when timing matters more than competition, or when discretion is the point. We place it directly with a buyer, at a price agreed in advance.",
+  `<div class="panel"><p class="mono muted">Head of private sales</p><h3 style="margin:8px 0 4px">Zoya Merchant</h3><p class="muted" style="font-size:.88rem">private@artogems.example</p></div>`)}
+<section class="band"><div class="wrap">
+  <div class="grid g2" style="align-items:start">
+    <div class="rise">
+      <h3>How it works</h3>
+      <div class="steps" style="margin-top:20px">
+        <div class="step"><div><h4>We agree a figure</h4><p>Not an estimate range &mdash; a price you would accept and a floor you would not go below.</p></div></div>
+        <div class="step"><div><h4>We approach a short list</h4><p>Usually between three and twelve collectors or institutions. You see the list before we contact anyone.</p></div></div>
+        <div class="step"><div><h4>Viewing, in private</h4><p>At our gallery, at your home, or at the buyer's, with our handlers moving the work.</p></div></div>
+        <div class="step"><div><h4>Sale and settlement</h4><p>Funds cleared before release. Commission agreed in writing at the start, typically below the auction seller's rate.</p></div></div>
+      </div>
+    </div>
+    <div class="rise stack">
+      <div class="panel">
+        <h4>When an auction is better</h4>
+        <p class="muted" style="margin-top:10px;font-size:.92rem">If there is real competition for the object, an auction will usually find a higher price than a negotiation. We will tell you when that is the case, even though the commission is better for us the other way.</p>
+      </div>
+      <div class="panel panel-nacre">
+        <h4>Confidentiality</h4>
+        <p class="muted" style="margin-top:10px;font-size:.92rem">Private sales are not published, not listed in results, and not discussed. Where a buyer asks for provenance, we give only what you have agreed to release.</p>
+      </div>
+      <a class="btn btn-em" href="#/sell">Start a conversation</a>
+    </div>
+  </div>
+</div></section>`;
+
+PAGES.results=()=>`${crumbs(["Results"])}
+${phead("Results","Hammer prices, including the ones that did not sell.","We publish every lot, sold and passed. A results page that only lists successes is a marketing document, not a record.")}
+<section class="band"><div class="wrap">
+  <div class="tbl-wrap rise"><table class="tbl"><thead><tr><th>Sale</th><th>Lot</th><th>Description</th><th>Estimate</th><th style="text-align:right">Hammer</th></tr></thead>
+    <tbody>${RESULTS.map(r=>`<tr><td class="muted" style="font-size:.83rem">${r.sale}</td><td class="num">${r.lot}</td><td>${r.what}</td><td class="num muted">${r.est}</td><td style="text-align:right" class="${r.ham==="Passed"?"num muted":"sold"}">${r.ham}</td></tr>`).join("")}</tbody></table></div>
+  <p class="muted rise" style="margin-top:24px;font-size:.86rem">Hammer prices exclude the buyer&rsquo;s premium. &ldquo;Passed&rdquo; means the lot did not reach its reserve and was not sold. Full results for every sale since 2009 are available on request.</p>
+  <div class="stats rise" style="margin-top:clamp(40px,5vw,70px)">
+    <div class="stat"><div class="n">86%</div><div class="l">Lots sold by volume</div></div>
+    <div class="stat"><div class="n">1.4×</div><div class="l">Median hammer vs low estimate</div></div>
+    <div class="stat"><div class="n">₹2.34 Cr</div><div class="l">Highest lot, 2026 to date</div></div>
+    <div class="stat"><div class="n">11 days</div><div class="l">Average seller settlement</div></div>
+  </div>
+</div></section>`;
+
+PAGES.bidding=()=>`${crumbs(["How to bid"])}
+${phead("How to bid","Four steps, and none of them are a surprise.","Registration takes about ten minutes. You can bid in the room, by telephone, by absentee bid left in advance, or live online.",
+  `<div class="panel panel-em"><p class="eyebrow">Registration</p><p style="margin-top:12px">Open until 18:00 on 23 September for the Evening Sale.</p><a class="btn btn-gh btn-sm" href="#regform" style="margin-top:16px">Register now</a></div>`)}
+<section class="band"><div class="wrap" style="display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(30px,5vw,74px);align-items:start">
+  <div class="rise">
+    <div class="steps">
+      <div class="step"><div><h4>Register for a paddle</h4><p>Bring photo ID and a bank reference. New bidders on lots above ₹25,00,000 are asked for a deposit, refunded within five working days if you don't buy.</p></div></div>
+      <div class="step"><div><h4>View the lot in person</h4><p>Come to the viewing, or ask for a condition report and additional images. For stones, the laboratory report is emailed before the sale, not after.</p></div></div>
+      <div class="step"><div><h4>Choose how you bid</h4><p>In the room, by telephone with one of our staff, by absentee bid left in advance, or live online. Telephone lines are booked until 18:00 on 23 September.</p></div></div>
+      <div class="step"><div><h4>Pay and collect</h4><p>Invoices go out the morning after the sale. Payment within seven days; collection from the Pune saleroom, or we arrange packing and insured shipping.</p></div></div>
+    </div>
+    <h3 style="margin-top:40px">Four things worth knowing</h3>
+    <ul class="checklist">
+      <li>The buyer&rsquo;s premium is 15% of the hammer price, plus applicable GST</li>
+      <li>A reserve is never set above the low estimate</li>
+      <li>An absentee bid is executed as cheaply as competing bids allow &mdash; leaving a high maximum does not mean paying it</li>
+      <li>A passed lot is announced as passed; we do not report it as sold</li>
+    </ul>
+  </div>
+  <div class="rise">
+    <div class="panel" style="padding:0">
+      <div style="padding:14px 18px;border-bottom:1px solid var(--line);font-family:var(--mono);font-size:.63rem;letter-spacing:.18em;text-transform:uppercase;color:var(--dim)">Bid increments &mdash; Indian rupees</div>
+      <table class="tbl" style="font-family:var(--mono);font-size:.8rem">
+        <tbody>
+          <tr><td>up to 2,00,000</td><td style="text-align:right" class="em">10,000</td></tr>
+          <tr><td>2,00,000 &ndash; 5,00,000</td><td style="text-align:right" class="em">25,000</td></tr>
+          <tr><td>5,00,000 &ndash; 10,00,000</td><td style="text-align:right" class="em">50,000</td></tr>
+          <tr><td>10,00,000 &ndash; 20,00,000</td><td style="text-align:right" class="em">1,00,000</td></tr>
+          <tr><td>20,00,000 &ndash; 50,00,000</td><td style="text-align:right" class="em">2,50,000</td></tr>
+          <tr><td>above 50,00,000</td><td style="text-align:right" class="em">auctioneer&rsquo;s discretion</td></tr>
+        </tbody></table>
+    </div>
+    <div class="panel" style="margin-top:22px" id="regform">
+      <h4>Register to bid</h4>
+      <p class="muted" style="font-size:.88rem;margin-top:8px">Sale 2609 &mdash; September Evening Sale.</p>
+      <div class="form" style="margin-top:20px">
+        <div class="field"><label for="rn">Full name</label><input id="rn" type="text" placeholder="As on your ID"></div>
+        <div class="field"><label for="re">Email</label><input id="re" type="email" placeholder="you@example.com"></div>
+        <div class="field"><label for="rp">Phone</label><input id="rp" type="tel" placeholder="+91"></div>
+        <div class="field"><label for="rm">How you will bid</label><select id="rm"><option>In the room</option><option>Telephone</option><option>Absentee bid</option><option>Live online</option></select></div>
+        <div class="field full"><label for="rl">Lots you are interested in (optional)</label><input id="rl" type="text" placeholder="e.g. 12, 18, 31"></div>
+        <p class="formnote">We will email a paddle number and the conditions of sale. Nothing is charged at this stage.</p>
+        <div class="field full"><button class="btn btn-em" data-form="reg">Send registration</button></div>
+      </div>
+    </div>
+  </div>
+</div></section>`;
+
+PAGES.sell=()=>`${crumbs(["Sell with us"])}
+${phead("Sell with us","Bring us the thing in the cupboard.","Valuations are free and take about a week. If we think your object belongs in a different saleroom &mdash; or in no saleroom &mdash; we will say so.",
+  `<div class="panel panel-nacre"><p class="mono muted">Consignment deadlines</p><dl class="spec" style="margin-top:12px;border-top:0">
+    <div><dt>Works on Paper</dt><dd>12 September</dd></div><div><dt>Winter Jewels</dt><dd>6 November</dd></div></dl></div>`)}
+<section class="band"><div class="wrap" style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,70px);align-items:start">
+  <div class="rise">
+    <h3>What to send with your first email</h3>
+    <ul class="checklist">
+      <li>Photographs: the whole work, the signature, the back, and any damage</li>
+      <li>Dimensions, and the medium if you know it</li>
+      <li>Anything you have on where it came from &mdash; a bill, a letter, a family story</li>
+      <li>For stones: carat weight and any laboratory report, however old</li>
+      <li>What you think it&rsquo;s worth, if you have a number in mind</li>
+    </ul>
+    <h3 style="margin-top:40px">What it costs</h3>
+    <dl class="spec">
+      <div><dt>Valuation</dt><dd>Free, no obligation</dd></div>
+      <div><dt>Seller&rsquo;s commission</dt><dd>10% of hammer, negotiable above ₹25,00,000</dd></div>
+      <div><dt>Photography</dt><dd>Included</dd></div>
+      <div><dt>Insurance in our care</dt><dd>Included</dd></div>
+      <div><dt>Laboratory report</dt><dd>At cost, only with your agreement</dd></div>
+      <div><dt>Unsold lots</dt><dd>No charge, returned or re-offered</dd></div>
+      <div><dt>Settlement</dt><dd>Within 21 days of payment by the buyer</dd></div>
+    </dl>
+  </div>
+  <div class="rise"><div class="panel">
+    <h4>Request a valuation</h4>
+    <p class="muted" style="font-size:.88rem;margin-top:8px">One object or a whole collection. We reply within five working days.</p>
+    <div class="form" style="margin-top:20px">
+      <div class="field"><label for="vn">Your name</label><input id="vn" type="text"></div>
+      <div class="field"><label for="ve">Email</label><input id="ve" type="email" placeholder="you@example.com"></div>
+      <div class="field"><label for="vd">Department</label><select id="vd"><option>Modern &amp; Contemporary Art</option><option>Jewels &amp; Coloured Stones</option><option>Works on paper &amp; editions</option><option>Not sure</option></select></div>
+      <div class="field"><label for="vc">Number of objects</label><select id="vc"><option>One</option><option>Two to five</option><option>Six to twenty</option><option>A whole collection</option></select></div>
+      <div class="field full"><label for="vt">Tell us about it</label><textarea id="vt" placeholder="Artist or stone, size or carat weight, when and where it came into the family, and anything you already know about condition."></textarea></div>
+      <p class="formnote">Please don&rsquo;t attach photographs here &mdash; we&rsquo;ll ask for them by email so they arrive at full size.</p>
+      <div class="field full"><button class="btn btn-em" data-form="val">Send request</button></div>
+    </div>
+  </div></div>
+</div></section>
+${cta("Not sure it is worth asking about?","Ask anyway. The valuation is free, and the worst outcome is a straight answer.","Email a specialist","#/specialists","See past results","#/results")}`;
+
+PAGES.specialists=()=>`${crumbs(["About"])}
+${phead("About","Six people, one rostrum, seventeen years.","Art &lsquo;O&rsquo; Gems was founded in Pune in 2009 to sell modern Indian art and coloured stones in the same room, on the theory that the people who collect one often collect the other. We have held two or three sales a year since.")}
+<section class="band"><div class="wrap">
+  <div class="grid g3">${TEAM.map((p,k)=>`<div class="person rise"><div class="av">${portrait(k+3)}</div><h4>${p.n}</h4><p class="role">${p.r}</p><p>${p.b}</p></div>`).join("")}</div>
+</div></section>
+<section class="band dark"><div class="wrap" style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,4vw,64px);align-items:start">
+  <div class="rise"><p class="eyebrow">How we work</p><h2 style="margin-top:16px;max-width:18ch">Three rules we have not broken yet.</h2></div>
+  <div class="rise stack">
+    <div><h4>We say what we do not know</h4><p>An attribution we cannot support goes in as &ldquo;attributed to&rdquo;, and a stone we cannot place goes in without an origin. Certainty is worth money, which is exactly why we will not manufacture it.</p></div>
+    <div><h4>We do not bid on our own lots</h4><p>Staff and their families do not bid in our sales. Where we own part of a lot, the catalogue says so against that lot.</p></div>
+    <div><h4>We publish the failures</h4><p>Passed lots appear in our results with the word &ldquo;Passed&rdquo; next to them.</p></div>
+  </div>
+</div></section>
+${cta("Come and see the building.","Koregaon Park, Pune. Tuesday to Sunday, 11:00–19:00, no appointment needed.","Visit us","#/visit","Current exhibition","#/exhibitions")}`;
+
+PAGES.visit=()=>`${crumbs(["Visit"])}
+${phead("Visit","The gallery is open whether or not there is a sale on.","Ground floor for exhibitions and the saleroom, mezzanine for jewels viewing and the reading room. Step-free access from the courtyard entrance.")}
+<section class="band"><div class="wrap" style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,70px);align-items:start">
+  <div class="rise">
+    <div class="grid g2" style="gap:30px">
+      <div><h4>Gallery &amp; saleroom</h4><p class="muted" style="margin-top:8px">Ground floor, Sohrab Building<br>North Main Road, Koregaon Park<br>Pune 411001, Maharashtra</p></div>
+      <div><h4>Hours</h4><p class="muted" style="margin-top:8px">Tuesday to Sunday, 11:00&ndash;19:00<br>Closed Mondays<br>Sale days: closed until 17:00</p></div>
+      <div><h4>Contact</h4><p class="muted" style="margin-top:8px"><a href="mailto:saleroom@artogems.example" style="text-decoration:none">saleroom@artogems.example</a><br><a href="tel:+912000000000" style="text-decoration:none">+91 20 0000 0000</a></p></div>
+      <div><h4>Getting here</h4><p class="muted" style="margin-top:8px">Ten minutes from Pune Junction. Paid parking in the courtyard, six spaces. Nearest bus stop: North Main Road.</p></div>
+    </div>
+    <div class="panel panel-nacre" style="margin-top:32px">
+      <h4>During sale week</h4>
+      <p class="muted" style="margin-top:10px;font-size:.92rem">Viewing 19&ndash;23 September, 11:00&ndash;19:00 daily. Jewels are shown on the mezzanine by request &mdash; ask at the desk and a specialist will bring the stones out with a loupe and a daylight lamp. No appointment needed, but the last hour is quieter.</p>
+    </div>
+  </div>
+  <div class="rise">
+    <div class="plate sq" style="cursor:default;box-shadow:none">${painting({seed:120,fields:9,strokes:3,marks:12,grain:300,cracks:0,colors:["#E9EDE8","#CBD8CF","#0B6046","#DDE3DD"],line:"#0B6046",alt:"Stylised plan of the Koregaon Park building"})}</div>
+    <p class="caption">Sohrab Building, ground floor and mezzanine. Courtyard entrance is step-free.</p>
+    <div class="panel" style="margin-top:24px">
+      <h4>Ask us something</h4>
+      <div class="form" style="margin-top:18px">
+        <div class="field full"><label for="cn">Name</label><input id="cn" type="text"></div>
+        <div class="field full"><label for="ce">Email</label><input id="ce" type="email" placeholder="you@example.com"></div>
+        <div class="field full"><label for="cm">Message</label><textarea id="cm" placeholder="A lot number, a viewing time, or an object you would like us to look at."></textarea></div>
+        <div class="field full"><button class="btn btn-em" data-form="con">Send message</button></div>
+      </div>
+    </div>
+  </div>
+</div></section>`;
+
+PAGES.missing=()=>`${crumbs(["Not found"])}
+<section class="band"><div class="narrow" style="text-align:center;padding:clamp(30px,6vw,80px) 0">
+  <p class="eyebrow" style="justify-content:center">404</p>
+  <h1 style="margin:20px 0">That lot has been withdrawn.</h1>
+  <p class="lead" style="margin-inline:auto">Or the page never existed. Either way, the catalogue is the best place to start again.</p>
+  <div style="display:flex;gap:12px;justify-content:center;margin-top:30px;flex-wrap:wrap"><a class="btn btn-em" href="#/sale">September catalogue</a><a class="btn" href="#/">Home</a></div>
+</div></section>`;
+
+/* ============ loupe ============ */
+function initLoupe(){
+  const plate=$("plate");if(!plate)return;
+  const loupe=$("loupe"),inner=$("loupeInner"),Z=3.1;
+  function place(x,y){
+    const r=plate.getBoundingClientRect(),L=loupe.offsetWidth/2;
+    x=Math.max(0,Math.min(r.width,x));y=Math.max(0,Math.min(r.height,y));
+    loupe.style.left=(x-L)+"px";loupe.style.top=(y-L)+"px";
+    inner.style.width=(r.width*Z)+"px";inner.style.height=(r.height*Z)+"px";
+    inner.style.left=(-(x*Z-L))+"px";inner.style.top=(-(y*Z-L))+"px";
+  }
+  const fromEvent=e=>{const r=plate.getBoundingClientRect(),p=e.touches?e.touches[0]:e;place(p.clientX-r.left,p.clientY-r.top)};
+  const reset=()=>{const r=plate.getBoundingClientRect();place(r.width*.36,r.height*.42)};
+  plate.addEventListener("pointermove",fromEvent);
+  plate.addEventListener("touchmove",e=>{fromEvent(e);e.preventDefault()},{passive:false});
+  plate.addEventListener("pointerleave",reset);
+  window.addEventListener("resize",reset);
+  requestAnimationFrame(reset);
+}
+
+/* ============ router ============ */
+function render(){
+  const h=(location.hash||"#/").slice(2).replace(/\/$/,"");
+  const seg=h.split("/").filter(Boolean);
+  let html,heroIdx=null;
+  if(seg.length===0){html=PAGES.home();heroIdx=0}
+  else if(seg[0]==="sale"){html=PAGES.sale(seg[1])}
+  else if(seg[0]==="lot"){html=PAGES.lot(seg[1]);const i=idx(seg[1]);if(i>=0)heroIdx=i}
+  else if(PAGES[seg[0]]){html=PAGES[seg[0]]()}
+  else{html=PAGES.missing()}
+  const app=$("app");app.innerHTML=html;
+  window.scrollTo(0,0);
+  $("drawer").classList.remove("open");$("burger").setAttribute("aria-expanded","false");
+
+  if(heroIdx!==null&&$("heroArt")){
+    const svg=heroIdx===0?painting({seed:7,h:1000,fields:5,strokes:5,marks:2,grain:1100,cracks:170,horizon:true,colors:["#12201C","#2E8C7A","#3D5A52","#9E6B3A","#1B3A34"],line:"#E8E2D2",alt:"Monsoon Interval III"}):artHi(heroIdx);
+    $("heroArt").innerHTML=svg;$("loupeInner").innerHTML=svg;initLoupe();
+  }
+  const cur="#/"+(seg[0]||"");
+  document.querySelectorAll(".mainnav a").forEach(a=>a.classList.toggle("act",a.getAttribute("href")===cur||(seg[0]==="lot"&&a.getAttribute("href")==="#/sale")));
+
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{rootMargin:"0px 0px -6% 0px"});
+  app.querySelectorAll(".rise").forEach((n,i)=>{n.style.transitionDelay=Math.min(i%5,4)*65+"ms";io.observe(n)});
+}
+window.addEventListener("hashchange",render);
+render();
+
+/* forms + drawer */
+document.addEventListener("click",e=>{
+  const b=e.target.closest("[data-form]");if(!b)return;
+  const box=b.closest(".form");if(box.querySelector(".sent"))return;
+  const msg=document.createElement("p");msg.className="sent";
+  msg.textContent={reg:"Registration sent. Your paddle number arrives by email within one working day.",val:"Request sent. A specialist replies within five working days.",con:"Message sent. We answer everything, usually the same day."}[b.dataset.form];
+  box.appendChild(msg);b.disabled=true;b.style.opacity=".5";
+});
+$("burger").addEventListener("click",()=>{const d=$("drawer"),o=d.classList.toggle("open");$("burger").setAttribute("aria-expanded",o)});
+$("nlBtn").addEventListener("click",()=>{const v=$("nlEmail").value.trim();if(!v)return;$("nlMsg").style.display="block";$("nlEmail").value=""});
+</script>
+</body>
+</html>
