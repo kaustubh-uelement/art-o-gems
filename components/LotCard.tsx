@@ -3,9 +3,14 @@ import { artSvg } from '@/lib/art';
 import { fmt } from '@/lib/format';
 import Link from 'next/link';
 
-export default function LotCard({ lot }: { lot: Lot }) {
+interface LotCardProps {
+  lot: Lot;
+  className?: string;
+}
+
+export default function LotCard({ lot, className }: LotCardProps) {
   return (
-    <Link href={`/lot/${lot.no}`} className="card">
+    <Link href={`/lot/${lot.no}`} className={['card', className].filter(Boolean).join(' ')}>
       <div className="card-art">
         <div dangerouslySetInnerHTML={{ __html: artSvg(lot) }} />
         <span className="card-no">Lot {lot.no}</span>
