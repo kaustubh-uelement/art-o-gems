@@ -8,7 +8,7 @@ import { LOTS } from '@/lib/data';
 import RevealOnScroll from '@/components/RevealOnScroll';
 
 export const metadata: Metadata = {
-  title: "Jewels & Coloured Stones — Art 'O' Gems",
+  title: "Jewels & Coloured Stones — Kalos Kagathos",
 };
 
 export default function JewelsPage() {
@@ -25,7 +25,7 @@ export default function JewelsPage() {
           <div className="panel">
             <p className="mono muted">Head of department</p>
             <h3 style={{ margin: '8px 0 4px' }}>Ritu Bhandari</h3>
-            <p className="muted" style={{ fontSize: '.88rem' }}>jewels@artogems.example · +91 20 0000 0003</p>
+            <p className="muted" style={{ fontSize: '.88rem' }}>jewels@kaloskagathos.example · +91 20 0000 0003</p>
             <Link className="btn btn-sm" href="/specialists" style={{ marginTop: '16px' }}>Meet the team</Link>
           </div>
         }

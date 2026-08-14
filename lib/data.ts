@@ -89,7 +89,7 @@ export const RESULTS: Result[] = [
 ];
 
 export const TEAM: TeamMember[] = [
-  { n: "Aparna Deshmukh", r: "Founder &amp; Auctioneer", b: "Took the rostrum at the first Art 'O' Gems sale in 2009 and has called every evening sale since. Cataloguing background at a Bombay house." },
+  { n: "Aparna Deshmukh", r: "Founder &amp; Auctioneer", b: "Took the rostrum at the first Kalos Kagathos sale in 2009 and has called every evening sale since. Cataloguing background at a Bombay house." },
   { n: "Farhan Kotwal", r: "Head, Modern &amp; Contemporary Art", b: "Fifteen years in Indian modernism, with a research interest in artists working outside Bombay and Delhi." },
   { n: "Ritu Bhandari", r: "Head, Jewels &amp; Coloured Stones", b: "Gemmologist. Handles origin and treatment questions, and decides which stones go to the laboratory before they go in the catalogue." },
   { n: "Samuel Tirkey", r: "Senior Specialist, Works on Paper", b: "Prints, drawings and photographs. Writes most of the condition reports and is the reason they are worth reading." },

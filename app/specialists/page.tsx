@@ -7,7 +7,7 @@ import { portrait } from '@/lib/art';
 import RevealOnScroll from '@/components/RevealOnScroll';
 
 export const metadata: Metadata = {
-  title: "About — Art 'O' Gems",
+  title: "About — Kalos Kagathos",
 };
 
 export default function SpecialistsPage() {
@@ -17,7 +17,7 @@ export default function SpecialistsPage() {
       <PageHead
         eyebrow="About"
         h1="Six people, one rostrum, seventeen years."
-        lead="Art ‘O’ Gems was founded in Pune in 2009 to sell modern Indian art and coloured stones in the same room, on the theory that the people who collect one often collect the other. We have held two or three sales a year since."
+        lead="Kalos Kagathos was founded in Pune in 2009 to sell modern Indian art and coloured stones in the same room, on the theory that the people who collect one often collect the other. We have held two or three sales a year since."
       />
 
       <section className="band">

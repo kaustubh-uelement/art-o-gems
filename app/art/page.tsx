@@ -8,7 +8,7 @@ import { LOTS } from '@/lib/data';
 import RevealOnScroll from '@/components/RevealOnScroll';
 
 export const metadata: Metadata = {
-  title: "Modern & Contemporary Art — Art 'O' Gems",
+  title: "Modern & Contemporary Art — Kalos Kagathos",
 };
 
 export default function ArtPage() {
@@ -25,7 +25,7 @@ export default function ArtPage() {
           <div className="panel">
             <p className="mono muted">Head of department</p>
             <h3 style={{ margin: '8px 0 4px' }}>Farhan Kotwal</h3>
-            <p className="muted" style={{ fontSize: '.88rem' }}>art@artogems.example · +91 20 0000 0002</p>
+            <p className="muted" style={{ fontSize: '.88rem' }}>art@kaloskagathos.example · +91 20 0000 0002</p>
             <Link className="btn btn-sm" href="/specialists" style={{ marginTop: '16px' }}>Meet the team</Link>
           </div>
         }

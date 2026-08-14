@@ -6,7 +6,7 @@ import ValuationForm from '@/components/forms/ValuationForm';
 import RevealOnScroll from '@/components/RevealOnScroll';
 
 export const metadata: Metadata = {
-  title: "Sell with us — Art 'O' Gems",
+  title: "Sell with us — Kalos Kagathos",
 };
 
 export default function SellPage() {

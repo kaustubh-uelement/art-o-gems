@@ -4,7 +4,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import RevealOnScroll from '@/components/RevealOnScroll';
 
 export const metadata: Metadata = {
-  title: "Not Found — Art 'O' Gems"
+  title: "Not Found — Kalos Kagathos"
 };
 
 export default function NotFound() {

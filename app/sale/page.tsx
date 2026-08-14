@@ -7,7 +7,7 @@ import { LOTS } from '@/lib/data';
 import RevealOnScroll from '@/components/RevealOnScroll';
 
 export const metadata: Metadata = {
-  title: "September Evening Sale — Art 'O' Gems",
+  title: "September Evening Sale — Kalos Kagathos",
 };
 
 type Props = { searchParams: Promise<{ category?: string }> };

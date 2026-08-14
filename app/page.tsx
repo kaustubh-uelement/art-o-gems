@@ -8,7 +8,7 @@ import LotCard from '@/components/LotCard';
 import RevealOnScroll from '@/components/RevealOnScroll';
 
 export const metadata: Metadata = {
-  title: "Art 'O' Gems — Gallery & Auction House, Pune",
+  title: "Kalos Kagathos — Gallery & Auction House, Pune",
   description: "A gallery and auction house for modern art, coloured stones and period jewels. Auctions, exhibitions, valuations and private sales."
 };
 
@@ -28,7 +28,7 @@ export default function Home() {
               <h1 className="rise">Look at it the way a <em>specialist</em> would.</h1>
             </RevealOnScroll>
             <RevealOnScroll>
-              <p className="lead rise">Art ‘O’ Gems is a gallery and auction house for modern art, coloured stones and period jewels. Drag the loupe across the canvas — the craquelure, the marble dust, the pigment sitting proud of the weave. Then decide what it’s worth to you.</p>
+              <p className="lead rise">Kalos Kagathos is a gallery and auction house for modern art, coloured stones and period jewels. Drag the loupe across the canvas — the craquelure, the marble dust, the pigment sitting proud of the weave. Then decide what it’s worth to you.</p>
             </RevealOnScroll>
             <RevealOnScroll>
               <div className="hero-cta rise">

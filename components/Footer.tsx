@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="ftr-grid">
           <div>
             <Link className="mark" href="/">
-              Art <span className="q">&lsquo;</span>
+              Kalos
               <svg viewBox="0 0 40 40" aria-hidden="true">
                 <g fill="none" stroke="#3FD9A6" strokeWidth="1.5">
                   <path d="M20 2.4 34.3 8.4 40 20 34.3 31.6 20 37.6 5.7 31.6 0 20 5.7 8.4Z"/>
@@ -16,7 +16,7 @@ export default function Footer() {
                   <path d="M12.5 14.5 5.7 8.9M27.5 14.5 34.3 8.9M12.5 25.5 5.7 31.1M27.5 25.5 34.3 31.1M20 11.4V2.9M20 28.6v8.5M9.4 20H.6M30.6 20h8.8"/>
                 </g>
               </svg>
-              <span className="q">&rsquo;</span> Gems
+              Kagathos
               <span style={{ fontFamily: 'var(--mono)', fontSize: '.58rem', letterSpacing: '.14em', textTransform: 'uppercase', color: '#8FA79A', marginLeft: '10px', paddingLeft: '10px', borderLeft: '1px solid var(--line-dk)', whiteSpace: 'nowrap' }}>by Uelement</span>
             </Link>
             <p style={{ marginTop: '16px', maxWidth: '30ch', color: 'var(--dim)', fontSize: '.94rem' }}>
@@ -54,13 +54,13 @@ export default function Footer() {
               <li><Link href="/visit">Gallery &amp; saleroom</Link></li>
               <li><Link href="/exhibitions">Exhibitions</Link></li>
               <li><Link href="/specialists">Our specialists</Link></li>
-              <li><a href="mailto:saleroom@artogems.example">saleroom@artogems.example</a></li>
+              <li><a href="mailto:saleroom@kaloskagathos.example">saleroom@kaloskagathos.example</a></li>
               <li><a href="tel:+912000000000">+91 20 0000 0000</a></li>
             </ul>
           </div>
         </div>
         <div className="ftr-b">
-          <p>&copy; 2026 Art &lsquo;O&rsquo; Gems, Pune &middot; by Uelement</p>
+          <p>&copy; 2026 Kalos Kagathos, Pune &middot; by Uelement</p>
           <p>
             <span>Conditions of sale</span> &middot; <span>Terms of consignment</span> &middot; <span>Privacy</span>
           </p>

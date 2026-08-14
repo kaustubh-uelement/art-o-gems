@@ -4,7 +4,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
-  title: "Art 'O' Gems — Gallery & Auction House, Pune",
+  title: "Kalos Kagathos — Gallery & Auction House, Pune",
   description: 'A gallery and auction house for modern art, coloured stones and period jewels. Auctions, exhibitions, valuations and private sales.',
 };
 

@@ -5,7 +5,7 @@ import PageHead from '@/components/PageHead';
 import RevealOnScroll from '@/components/RevealOnScroll';
 
 export const metadata: Metadata = {
-  title: "Results — Art 'O' Gems",
+  title: "Results — Kalos Kagathos",
   description: "We publish every lot, sold and passed. A results page that only lists successes is a marketing document, not a record."
 };
 

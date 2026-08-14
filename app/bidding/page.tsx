@@ -5,7 +5,7 @@ import RegistrationForm from '@/components/forms/RegistrationForm';
 import RevealOnScroll from '@/components/RevealOnScroll';
 
 export const metadata: Metadata = {
-  title: "How to bid — Art 'O' Gems",
+  title: "How to bid — Kalos Kagathos",
 };
 
 export default function BiddingPage() {

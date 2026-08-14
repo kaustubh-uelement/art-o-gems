@@ -5,7 +5,7 @@ import PageHead from '@/components/PageHead';
 import RevealOnScroll from '@/components/RevealOnScroll';
 
 export const metadata: Metadata = {
-  title: "Private Sales — Art 'O' Gems",
+  title: "Private Sales — Kalos Kagathos",
   description: "A private sale is the right route when a work is exceptionally large, when the market is thin, when timing matters more than competition, or when discretion is the point."
 };
 
@@ -21,7 +21,7 @@ export default function PrivateSales() {
           <div className="panel">
             <p className="mono muted">Head of private sales</p>
             <h3 style={{ margin: '8px 0 4px' }}>Zoya Merchant</h3>
-            <p className="muted" style={{ fontSize: '.88rem' }}>private@artogems.example</p>
+            <p className="muted" style={{ fontSize: '.88rem' }}>private@kaloskagathos.example</p>
           </div>
         }
       />

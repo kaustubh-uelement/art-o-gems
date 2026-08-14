@@ -7,7 +7,7 @@ import RevealOnScroll from '@/components/RevealOnScroll';
 import CtaBand from '@/components/CtaBand';
 
 export const metadata: Metadata = {
-  title: "Auctions — Art 'O' Gems",
+  title: "Auctions — Kalos Kagathos",
   description: "Every sale is held in the Pune saleroom and streamed for online bidders. Catalogues go online about three weeks before each sale."
 };
 
