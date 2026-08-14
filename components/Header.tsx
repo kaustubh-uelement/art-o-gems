@@ -30,6 +30,7 @@ export default function Header() {
             </g>
           </svg>
           <span className="q">&rsquo;</span> Gems
+          <span style={{ fontFamily: 'var(--mono)', fontSize: '.58rem', letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--emerald)', marginLeft: '10px', paddingLeft: '10px', borderLeft: '1px solid var(--line)', whiteSpace: 'nowrap' }}>by Uelement</span>
         </Link>
         <nav className="mainnav" aria-label="Primary">
           {NAV.map(([href, label]) => (

@@ -10,13 +10,14 @@ export default function Footer() {
             <Link className="mark" href="/">
               Art <span className="q">&lsquo;</span>
               <svg viewBox="0 0 40 40" aria-hidden="true">
-                <g fill="none" stroke="#0B6046" strokeWidth="1.5">
+                <g fill="none" stroke="#3FD9A6" strokeWidth="1.5">
                   <path d="M20 2.4 34.3 8.4 40 20 34.3 31.6 20 37.6 5.7 31.6 0 20 5.7 8.4Z"/>
                   <path d="M20 11.4 27.5 14.5 30.6 20 27.5 25.5 20 28.6 12.5 25.5 9.4 20 12.5 14.5Z"/>
                   <path d="M12.5 14.5 5.7 8.9M27.5 14.5 34.3 8.9M12.5 25.5 5.7 31.1M27.5 25.5 34.3 31.1M20 11.4V2.9M20 28.6v8.5M9.4 20H.6M30.6 20h8.8"/>
                 </g>
               </svg>
               <span className="q">&rsquo;</span> Gems
+              <span style={{ fontFamily: 'var(--mono)', fontSize: '.58rem', letterSpacing: '.14em', textTransform: 'uppercase', color: '#8FA79A', marginLeft: '10px', paddingLeft: '10px', borderLeft: '1px solid var(--line-dk)', whiteSpace: 'nowrap' }}>by Uelement</span>
             </Link>
             <p style={{ marginTop: '16px', maxWidth: '30ch', color: 'var(--dim)', fontSize: '.94rem' }}>
               A gallery and auction house for modern art, coloured stones and period jewels. Founded in Pune, 2009.
@@ -59,7 +60,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="ftr-b">
-          <p>&copy; 2026 Art &lsquo;O&rsquo; Gems, Pune</p>
+          <p>&copy; 2026 Art &lsquo;O&rsquo; Gems, Pune &middot; by Uelement</p>
           <p>
             <span>Conditions of sale</span> &middot; <span>Terms of consignment</span> &middot; <span>Privacy</span>
           </p>
