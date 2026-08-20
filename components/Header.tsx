@@ -32,6 +32,7 @@ export default function Header() {
             </g>
           </svg>
           Kagathos
+          <span className="text-[0.45em] font-light text-[var(--dim)] ml-1 relative top-[0.6em]" style={{ fontFamily: 'var(--body)' }}>by Uelement</span>
         </Link>
         <nav className="mainnav" aria-label="Primary">
           {NAV.map(([href, label]) => (

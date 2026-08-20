@@ -18,6 +18,7 @@ export default function Footer() {
                 </g>
               </svg>
               Kagathos
+              <span className="text-[0.45em] font-light text-[var(--dim)] ml-1 relative top-[0.6em]" style={{ fontFamily: 'var(--body)' }}>by Uelement</span>
             </Link>
             <p
               style={{
