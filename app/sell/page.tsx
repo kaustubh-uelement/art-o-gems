@@ -6,7 +6,7 @@ import ValuationForm from '@/components/forms/ValuationForm';
 import RevealOnScroll from '@/components/RevealOnScroll';
 
 export const metadata: Metadata = {
-  title: "Sell with us — Kalos Kagathos",
+  title: "Sell with us - Kalos Kagathos",
 };
 
 export default function SellPage() {
@@ -16,7 +16,7 @@ export default function SellPage() {
       <PageHead
         eyebrow="Sell with us"
         h1="Bring us the thing in the cupboard."
-        lead="Valuations are free and take about a week. If we think your object belongs in a different saleroom — or in no saleroom — we will say so."
+        lead="Valuations are free and take about a week. If we think your object belongs in a different saleroom, or in no saleroom, we will say so."
         aside={
           <div className="panel panel-nacre">
             <p className="mono muted">Consignment deadlines</p>
@@ -36,7 +36,7 @@ export default function SellPage() {
               <ul className="checklist">
                 <li>Photographs: the whole work, the signature, the back, and any damage</li>
                 <li>Dimensions, and the medium if you know it</li>
-                <li>Anything you have on where it came from — a bill, a letter, a family story</li>
+                <li>Anything you have on where it came from: a bill, a letter, a family story</li>
                 <li>For stones: carat weight and any laboratory report, however old</li>
                 <li>What you think it’s worth, if you have a number in mind</li>
               </ul>

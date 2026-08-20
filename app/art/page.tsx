@@ -8,7 +8,7 @@ import { LOTS } from '@/lib/data';
 import RevealOnScroll from '@/components/RevealOnScroll';
 
 export const metadata: Metadata = {
-  title: "Modern & Contemporary Art — Kalos Kagathos",
+  title: "Modern & Contemporary Art - Kalos Kagathos",
 };
 
 export default function ArtPage() {
@@ -39,7 +39,7 @@ export default function ArtPage() {
               <p className="muted">Paintings, drawings, prints in numbered editions, photographs and sculpture, generally from 1947 onward. We are glad to look at anything, but we do best with post-war Indian modernism, contemporary work with an exhibition history, and single-owner collections assembled with some conviction.</p>
               <p className="muted">We do not sell unattributed decorative pictures, reproductions, or works we cannot trace. If a signature is the only evidence, that is not evidence.</p>
               <h3 style={{ marginTop: '14px' }}>How we catalogue</h3>
-              <p className="muted">Every lot gets an ownership line, a written condition report, and where relevant a note on restoration. Attributions follow the usual ladder — by the artist, attributed to, studio of, after — and we use the lower rung when we are not certain.</p>
+              <p className="muted">Every lot gets an ownership line, a written condition report, and where relevant a note on restoration. Attributions follow the usual ladder (by the artist, attributed to, studio of, after) and we use the lower rung when we are not certain.</p>
             </div>
             <div className="panel">
               <p className="mono muted">Department calendar 2026</p>

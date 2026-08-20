@@ -18,7 +18,12 @@ export default function Footer() {
                 </g>
               </svg>
               Kagathos
-              <span className="text-[0.45em] font-light text-[var(--dim)] ml-1 relative top-[0.6em]" style={{ fontFamily: 'var(--body)' }}>by Uelement</span>
+              <span
+                className="text-[0.45em] font-light text-[var(--dim)] ml-1 relative top-[0.6em]"
+                style={{ fontFamily: "var(--body)" }}
+              >
+                by UElement
+              </span>
             </Link>
             <p
               style={{
@@ -28,8 +33,9 @@ export default function Footer() {
                 fontSize: ".94rem",
               }}
             >
-              A gallery and auction house for modern art, coloured stones and
-              period jewels. Founded in Mumbai, 2009.
+              A trusted & reliable Gallery and Auction house for modern Art,
+              Coloured stones and Period Jewels. Delivering to the World right
+              from the heart of from Mumbai.
             </p>
             <hr className="rule nacre-rule" style={{ margin: "30px 0" }} />
             <p

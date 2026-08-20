@@ -7,7 +7,7 @@ import { portrait } from '@/lib/art';
 import RevealOnScroll from '@/components/RevealOnScroll';
 
 export const metadata: Metadata = {
-  title: "About — Kalos Kagathos",
+  title: "About - Kalos Kagathos",
 };
 
 export default function SpecialistsPage() {

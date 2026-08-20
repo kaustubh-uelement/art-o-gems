@@ -5,7 +5,7 @@ import PageHead from '@/components/PageHead';
 import RevealOnScroll from '@/components/RevealOnScroll';
 
 export const metadata: Metadata = {
-  title: "Private Sales — Kalos Kagathos",
+  title: "Private Sales - Kalos Kagathos",
   description: "A private sale is the right route when a work is exceptionally large, when the market is thin, when timing matters more than competition, or when discretion is the point."
 };
 
@@ -36,7 +36,7 @@ export default function PrivateSales() {
                   <div className="step">
                     <div>
                       <h4>We agree a figure</h4>
-                      <p>Not an estimate range — a price you would accept and a floor you would not go below.</p>
+                      <p>Not an estimate range; a price you would accept and a floor you would not go below.</p>
                     </div>
                   </div>
                   <div className="step">

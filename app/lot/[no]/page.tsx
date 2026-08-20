@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: { params: Promise<{ no: strin
   const { no } = await params;
   const lot = LOTS.find(l => l.no === no);
   if (!lot) return {};
-  return { title: `Lot ${lot.no}: ${lot.title} — Kalos Kagathos` };
+  return { title: `Lot ${lot.no}: ${lot.title} - Kalos Kagathos` };
 }
 
 export default async function LotPage({ params }: { params: Promise<{ no: string }> }) {

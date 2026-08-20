@@ -65,7 +65,7 @@ export default function Loupe({ svgString, lotNo, isSquare }: LoupeProps) {
     };
   }, []);
 
-  // Renders ONLY the .plate div — the outer figure.plate-wrap and figcaption
+  // Renders ONLY the .plate div, the outer figure.plate-wrap and figcaption
   // are provided by the parent page, giving each page full control over the caption.
   return (
     <div ref={plateRef} className={`plate${isSquare ? ' sq' : ''}`}>

@@ -5,7 +5,7 @@ import RegistrationForm from '@/components/forms/RegistrationForm';
 import RevealOnScroll from '@/components/RevealOnScroll';
 
 export const metadata: Metadata = {
-  title: "How to bid — Kalos Kagathos",
+  title: "How to bid - Kalos Kagathos",
 };
 
 export default function BiddingPage() {
@@ -39,14 +39,14 @@ export default function BiddingPage() {
               <ul className="checklist">
                 <li>The buyer’s premium is 15% of the hammer price, plus applicable GST</li>
                 <li>A reserve is never set above the low estimate</li>
-                <li>An absentee bid is executed as cheaply as competing bids allow — leaving a high maximum does not mean paying it</li>
+                <li>An absentee bid is executed as cheaply as competing bids allow; leaving a high maximum does not mean paying it</li>
                 <li>A passed lot is announced as passed; we do not report it as sold</li>
               </ul>
             </div>
             
             <div>
               <div className="panel" style={{ padding: 0 }}>
-                <div style={{ padding: '14px 18px', borderBottom: '1px solid var(--line)', fontFamily: 'var(--mono)', fontSize: '.63rem', letterSpacing: '.18em', textTransform: 'uppercase', color: 'var(--dim)' }}>Bid increments — Indian rupees</div>
+                <div style={{ padding: '14px 18px', borderBottom: '1px solid var(--line)', fontFamily: 'var(--mono)', fontSize: '.63rem', letterSpacing: '.18em', textTransform: 'uppercase', color: 'var(--dim)' }}>Bid increments - Indian rupees</div>
                 <table className="tbl" style={{ fontFamily: 'var(--mono)', fontSize: '.8rem' }}>
                   <tbody>
                     <tr><td>up to 2,00,000</td><td style={{ textAlign: 'right' }} className="em">10,000</td></tr>
@@ -60,7 +60,7 @@ export default function BiddingPage() {
               </div>
               <div className="panel" style={{ marginTop: '22px' }} id="regform">
                 <h4>Register to bid</h4>
-                <p className="muted" style={{ fontSize: '.88rem', marginTop: '8px' }}>Sale 2609 — September Evening Sale.</p>
+                <p className="muted" style={{ fontSize: '.88rem', marginTop: '8px' }}>Sale 2609: September Evening Sale.</p>
                 <RegistrationForm />
               </div>
             </div>

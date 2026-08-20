@@ -25,7 +25,7 @@ export default function ValuationForm() {
         <label htmlFor="vt">Tell us about it</label>
         <textarea id="vt" placeholder="Artist or stone, size or carat weight, when and where it came into the family, and anything you already know about condition." rows={4}></textarea>
       </div>
-      <p className="formnote">Please don't attach photographs here — we'll ask for them by email so they arrive at full size.</p>
+      <p className="formnote">Please don't attach photographs here; we'll ask for them by email so they arrive at full size.</p>
       <div className="field full">
         <button className="btn btn-em" onClick={handleSubmit} disabled={submitted} style={submitted ? { opacity: 0.5 } : {}}>Send request</button>
       </div>

@@ -8,7 +8,7 @@ import { LOTS } from '@/lib/data';
 import RevealOnScroll from '@/components/RevealOnScroll';
 
 export const metadata: Metadata = {
-  title: "Jewels & Coloured Stones — Kalos Kagathos",
+  title: "Jewels & Coloured Stones - Kalos Kagathos",
 };
 
 export default function JewelsPage() {
@@ -36,7 +36,7 @@ export default function JewelsPage() {
           <div className="wrap grid g2 rise" style={{ gap: 'clamp(30px,5vw,74px)', alignItems: 'start' }}>
             <div>
               <h3>Origin and treatment, in the lot line</h3>
-              <p className="muted">Where a stone is heated, oiled, filled, diffused or dyed, we say so in the lot title or the first line of the description — not in a footnote at the back of the catalogue. Where a report is more than five years old, we send the stone out again at our expense.</p>
+              <p className="muted">Where a stone is heated, oiled, filled, diffused or dyed, we say so in the lot title or the first line of the description, not in a footnote at the back of the catalogue. Where a report is more than five years old, we send the stone out again at our expense.</p>
               <h3 style={{ marginTop: '14px' }}>Laboratories we use</h3>
               <p className="muted">Reports come from independent laboratories with no interest in the sale. We will name the laboratory before you bid, and we will tell you if two reports on the same stone disagree, which happens more often than the trade likes to admit.</p>
               <h3 style={{ marginTop: '14px' }}>Pearls</h3>

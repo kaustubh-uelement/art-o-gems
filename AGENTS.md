@@ -1,4 +1,4 @@
-# Agent instructions — Art 'O' Gems Next.js port
+# Agent instructions - Art 'O' Gems Next.js port
 
 This project is a **faithful port** of `art-o-gems-website.html` (in the project
 root) into Next.js. It is not a redesign. These rules apply to every task in
@@ -9,7 +9,7 @@ this repo, not just the initial build.
 - **Pixel-for-pixel visual parity** with `art-o-gems-website.html`. Do not
   change layout, spacing, colors, typography, copy, or animation timing
   unless explicitly asked to.
-- **No new images.** The source site has zero raster images — every painting,
+- **No new images.** The source site has zero raster images: every painting,
   gemstone, and pearl is procedurally generated inline SVG from seeded random
   functions (`painting()`, `stone()`, `pearl()`, `portrait()` + a seeded
   `rng(seed)` in the original `<script>`). Port these functions faithfully;
@@ -19,7 +19,7 @@ this repo, not just the initial build.
   server-rendered and client-rendered markup match exactly. Never introduce
   `Math.random()` or `Date.now()` into them.
 - **Real routes only.** The original uses `#/route` hash navigation with a
-  `PAGES` lookup table — always convert these to real Next.js App Router
+  `PAGES` lookup table; always convert these to real Next.js App Router
   routes and `<Link>` navigation. Never reintroduce hash-based routing or
   manual `innerHTML` rendering.
 
@@ -27,7 +27,7 @@ this repo, not just the initial build.
 
 - Next.js App Router, TypeScript, Tailwind CSS, **no `src/` directory**
   (`app/`, `components/`, `lib/` at project root)
-- No UI component libraries — this is a fully custom design system
+- No UI component libraries: this is a fully custom design system
 - Use the dependency versions already installed by `create-next-app`; only
   add packages when genuinely needed, at their latest stable version
 
@@ -35,7 +35,7 @@ this repo, not just the initial build.
 
 - All copy (lot descriptions, provenance, condition reports, team bios,
   exhibition text, form confirmation messages, etc.) must match the source
-  HTML verbatim — do not shorten, paraphrase, or "clean up" wording.
+  HTML verbatim: do not shorten, paraphrase, or "clean up" wording.
 - Keep the data arrays (`LOTS`, `SALES`, `RESULTS`, `TEAM`, `EXHIBITIONS`,
   `NAV`) in typed files under `lib/`, not inline in components.
 

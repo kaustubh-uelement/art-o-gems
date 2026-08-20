@@ -6,7 +6,7 @@ import PageHead from '@/components/PageHead';
 import RevealOnScroll from '@/components/RevealOnScroll';
 
 export const metadata: Metadata = {
-  title: "Exhibitions — Kalos Kagathos",
+  title: "Exhibitions - Kalos Kagathos",
   description: "The ground-floor gallery shows four or five exhibitions a year. Entry is free, loans are welcome, and about half of what hangs is not for sale."
 };
 

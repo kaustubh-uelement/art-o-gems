@@ -26,7 +26,7 @@ export default function NewsletterForm() {
       </div>
       {submitted && (
         <p className="mono" style={{ marginTop: '10px', color: '#3FD9A6' }}>
-          Added — look for the September catalogue.
+          Added. Look for the September catalogue.
         </p>
       )}
     </>

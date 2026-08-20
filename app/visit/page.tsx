@@ -6,7 +6,7 @@ import { painting } from '@/lib/art';
 import RevealOnScroll from '@/components/RevealOnScroll';
 
 export const metadata: Metadata = {
-  title: "Visit — Kalos Kagathos",
+  title: "Visit - Kalos Kagathos",
 };
 
 export default function VisitPage() {
@@ -43,7 +43,7 @@ export default function VisitPage() {
               </div>
               <div className="panel panel-nacre" style={{ marginTop: '32px' }}>
                 <h4>During sale week</h4>
-                <p className="muted" style={{ marginTop: '10px', fontSize: '.92rem' }}>Viewing 19–23 September, 11:00–19:00 daily. Jewels are shown on the mezzanine by request — ask at the desk and a specialist will bring the stones out with a loupe and a daylight lamp. No appointment needed, but the last hour is quieter.</p>
+                <p className="muted" style={{ marginTop: '10px', fontSize: '.92rem' }}>Viewing 19–23 September, 11:00–19:00 daily. Jewels are shown on the mezzanine by request; ask at the desk and a specialist will bring the stones out with a loupe and a daylight lamp. No appointment needed, but the last hour is quieter.</p>
               </div>
             </div>
             
