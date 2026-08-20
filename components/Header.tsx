@@ -23,7 +23,10 @@ export default function Header() {
     <header className="hdr">
       <div className="wrap hdr-in">
         <Link className="mark" href="/">
-          Kalos
+          <span className="relative flex flex-col items-center">
+            Kalos
+            <span className="absolute top-full left-[0.1em] -mt-[0.3em] text-[0.38em] font-light text-[var(--dim)] whitespace-nowrap" style={{ fontFamily: 'var(--body)' }}>by UElement</span>
+          </span>
           <svg viewBox="0 0 40 40" aria-hidden="true">
             <g fill="none" stroke="#0B6046" strokeWidth="1.5">
               <path d="M20 2.4 34.3 8.4 40 20 34.3 31.6 20 37.6 5.7 31.6 0 20 5.7 8.4Z" />
@@ -32,7 +35,6 @@ export default function Header() {
             </g>
           </svg>
           Kagathos
-          <span className="text-[0.45em] font-light text-[var(--dim)] ml-1 relative top-[0.6em]" style={{ fontFamily: 'var(--body)' }}>by UElement</span>
         </Link>
         <nav className="mainnav" aria-label="Primary">
           {NAV.map(([href, label]) => (
