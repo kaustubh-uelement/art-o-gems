@@ -10,21 +10,13 @@ export default function Footer() {
           <div>
             <Link className="mark" href="/">
               Kalos
-              <Image
-                src="/Kalos_Kagathos.png"
-                alt="Kalos Kagathos"
-                width={36}
-                height={36}
-                style={{
-                  width: "1.25em",
-                  height: "1.25em",
-                  objectFit: "cover",
-                  borderRadius: "50%",
-                  flex: "none",
-                  marginInline: ".04em",
-                  background: "var(--ivory)",
-                }}
-              />
+              <svg viewBox="0 0 40 40" aria-hidden="true">
+                <g fill="none" stroke="#3B7F6B" strokeWidth="1.5">
+                  <path d="M20 2.4 34.3 8.4 40 20 34.3 31.6 20 37.6 5.7 31.6 0 20 5.7 8.4Z" />
+                  <path d="M20 11.4 27.5 14.5 30.6 20 27.5 25.5 20 28.6 12.5 25.5 9.4 20 12.5 14.5Z" />
+                  <path d="M12.5 14.5 5.7 8.9M27.5 14.5 34.3 8.9M12.5 25.5 5.7 31.1M27.5 25.5 34.3 31.1M20 11.4V2.9M20 28.6v8.5M9.4 20H.6M30.6 20h8.8" />
+                </g>
+              </svg>
               Kagathos
             </Link>
             <p

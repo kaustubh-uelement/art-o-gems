@@ -333,7 +333,7 @@ p {
   text-transform: uppercase;
   text-decoration: none;
 }
-@media (max-width: 1180px) {
+@media (max-width: 1280px) {
   .mainnav {
     display: none;
   }
