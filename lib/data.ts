@@ -48,7 +48,7 @@ export interface Exhibition {
   st: string;
 }
 
-export type NavItem = [string, string];
+export type NavItem = [string, string, NavItem[]?];
 
 export const LOTS: Lot[] = [
   { no: "03", cat: "art", artist: "Meher Anand", title: "Monsoon Interval III", year: "2019", medium: "Oil and marble dust on linen", size: "152 × 122 cm", lo: 1800000, hi: 2400000, desc: "Signed and dated on the reverse. From the second Monsoon Interval group, in which Anand worked the marble dust into the ground while it was still wet, leaving a surface that reads as stone from a distance and as weather up close.", prov: "Acquired directly from the artist, Bombay, 2019; private collection, Pune.", cond: "Overall good. Fine drying craquelure in the upper green passage, stable. Unlined, on original stretcher. UV shows no retouching.", artType: "painting", artConfig: { seed: 7, fields: 5, strokes: 5, marks: 2, grain: 150, cracks: 26, colors: ["#12201C","#2E8C7A","#3D5A52","#9E6B3A","#1B3A34"], line: "#E8E2D2", alt: "Monsoon Interval III", horizon: true, h: 1000 } },
@@ -106,12 +106,14 @@ export const EXHIBITIONS: Exhibition[] = [
 
 export const NAV: NavItem[] = [
   ["/auctions", "Auctions"],
-  ["/sale", "Catalogue"],
-  ["/art", "Art"],
-  ["/jewels", "Jewels"],
+  ["/sale", "Catalogue", [
+    ["/art", "Art"],
+    ["/jewels", "Jewels"]
+  ]],
   ["/exhibitions", "Exhibitions"],
-  ["/private-sales", "Private sales"],
-  ["/sell", "Sell with us"],
-  ["/specialists", "About"],
-  ["/visit", "Visit"]
+  ["/specialists", "About", [
+    ["/private-sales", "Private sales"],
+    ["/sell", "Sell with us"],
+    ["/visit", "Visit"]
+  ]]
 ];
